@@ -15,96 +15,95 @@
                 <title>menu</title>
                 <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
             </svg>
-            <div id="navbar">
-                <a id="initial" href="#home">J</a>
-                <nav id="side-nav" class="side-nav">
-                    <ul>
-                        <li><a href="#about">About Me</a></li>
-                        <li><a href="#portfolio">My Portfolio</a></li>
-                        <li><a href="#code">Coding Examples</a></li>
-                        <li><a href="#scs">SCS Scheme</a></li>
-                        <li><a href="#contact">Contact Me</a></li>
-                    </ul>
-                </nav>
+            <div id="nav">
+                <a id="nav-initial" href="#home">J</a>
+                <ul id="nav-bar">
+                    <li class="nav-bar-item"><a href="#about">About Me</a></li>
+                    <li class="nav-bar-item"><a href="#portfolio">My Portfolio</a></li>
+                    <li class="nav-bar-item"><a href="#code">Coding Examples</a></li>
+                    <li class="nav-bar-item"><a href="#scs">SCS Scheme</a></li>
+                    <li class="nav-bar-item"><a href="#contact">Contact Me</a></li>
+                </ul>
             </div>
         </header>
-        <section id="home">
-            <div id="intro">
-                <h1 class="title">My Name is</h1>
-                <h1 class="title">Jason Chalangary</h1>
-                <h3 id="subtitle">I'm a web developer</h3>
-            </div>
-            <div id="home-scroll">
-                <p id="home-scroll-text">Scroll Down</p>
-                <svg id="home-scroll-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24">
-                    <title>keyboard_arrow_down</title>
-                    <path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path>
-                </svg>
-            </div>
-        </section>
-        <section id="portfolio">
-            <a href="#" class="project">
-                <img src="./assets/thumbnails/netmatters.png" alt="netmatters">
-                <h3>Netmatters</h3>
-                <p class="view-project">View Project &rarr;</p>
-            </a>
-            <a href="#" class="project">
-                <img src="./assets/thumbnails/carechange.png" alt="CareChange">
-                <h3>CareChange</h3>
-                <p>View Project &rarr;</p>
-            </a>
-            <a href="#" class="project">
-                <img src="./assets/thumbnails/letchat.png" alt="LetChat">
-                <h3>LetChat</h3>
-                <p>View Project &rarr;</p>
-            </a>
-            <a href="#" class="project">
-                <img src="./assets/thumbnails/flash-it.png" alt="flash-it">
-                <h3>Flash-IT</h3>
-                <p>View Project &rarr;</p>
-            </a>
-            <a href="#" class="project">
-                <img src="./assets/thumbnails/maQR.png" alt="maQR">
-                <h3>maQR</h3>
-                <p>View Project &rarr;</p>
-            </a>
-            <a href="#" class="project">
-                <img src="./assets/thumbnails/minfolio.png" alt="minfolio">
-                <h3>minfolio</h3>
-                <p>View Project &rarr;</p>
-            </a>
-        </section>
-        <section id="contact-wrapper">
-            <div id="contact">
-                <div id="contact-intro">
-                    <h1>Get in Touch</h1>
-                    <p>To discuss a project, learn to code, or simply talk about tech, say hi!</p>
-                    <p><a href="tel:'00000000000'">00000 000000</a></p>
-                    <p><a href="mailto:'info@netmatters.com">info@netmatters.com</a></p>
-                    <p>I look forward to hearing from you!</p>
+        <div id="container">
+            <section id="home">
+                <div id="intro">
+                    <h1 class="title">My Name is</h1>
+                    <h1 class="title">Jason Chalangary</h1>
+                    <h3 id="subtitle">I'm a web developer</h3>
                 </div>
-                <form id="contact-form">
-                    <div id="contact-form-inputs">
-                        <div>
-                            <input type="text" placeholder="First name*" required />
-                            <input type="text" placeholder="Last name*" required />
-                        </div>
-                        <input type="email" placeholder="Email address*" required />
-                        <input type="text" placeholder="Subject" />
-                        <input type="textarea" placeholder="Message*" required />
+                <div id="home-scroll">
+                    <p id="home-scroll-text">Scroll Down</p>
+                    <svg id="home-scroll-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <title>keyboard_arrow_down</title>
+                        <path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path>
+                    </svg>
+                </div>
+            </section>
+            <section id="portfolio">
+                <a href="#" class="project">
+                    <img src="./assets/thumbnails/netmatters.png" alt="netmatters thumbnail">
+                    <h3>Netmatters</h3>
+                    <p class="view-project">View Project &rarr;</p>
+                </a>
+                <a href="#" class="project">
+                    <img src="./assets/thumbnails/portfolio.png" alt="portfolio thumbnail">
+                    <h3>Portfolio</h3>
+                    <p>View Project &rarr;</p>
+                </a>
+                <a href="#" class="project">
+                    <img src="./assets/thumbnails/carechange.png" alt="CareChange thumbnail">
+                    <h3>CareChange</h3>
+                    <p>View Project &rarr;</p>
+                </a>
+                <a href="#" class="project">
+                    <img src="./assets/thumbnails/letchat.png" alt="LetChat thumbnail">
+                    <h3>LetChat</h3>
+                    <p>View Project &rarr;</p>
+                </a>
+                <a href="#" class="project">
+                    <img src="./assets/thumbnails/flash-it.png" alt="flash-it thumbnail">
+                    <h3>Flash-IT</h3>
+                    <p>View Project &rarr;</p>
+                </a>
+                <a href="#" class="project">
+                    <img src="./assets/thumbnails/minfolio.png" alt="minfolio thumbnail">
+                    <h3>minfolio</h3>
+                    <p>View Project &rarr;</p>
+                </a>
+            </section>
+            <section id="contact-wrapper">
+                <div id="contact">
+                    <div id="contact-intro">
+                        <h1>Get in Touch</h1>
+                        <p>To discuss a project, learn to code, or simply talk about tech, say hey!</p>
+                        <p><a href="tel:'00000000000'">00000 000000</a></p>
+                        <p><a href="mailto:'info@netmatters.com">info@netmatters.com</a></p>
                     </div>
-                    <button id="contact-form-submit" type="submit">Submit</button>
-                </form>
-            </div>
-            <a id="return" href="#home">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <title>keyboard_arrow_up</title>
-                    <path d="M7.406 15.422l-1.406-1.406 6-6 6 6-1.406 1.406-4.594-4.594z"></path>
-                </svg>
-                Back To Top
-            </a>
-        </section>
+                    <form id="contact-form">
+                        <div id="contact-form-inputs">
+                            <div>
+                                <input type="text" placeholder="First name*" required />
+                                <input type="text" placeholder="Last name*" required />
+                            </div>
+                            <input type="email" placeholder="Email address*" required />
+                            <input type="text" placeholder="Subject" />
+                            <textarea id="contact-form-inputs-message" placeholder="Message*" required></textarea>
+                        </div>
+                        <button id="contact-form-submit" type="submit">Submit</button>
+                    </form>
+                </div>
+                <a id="return" href="#home">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <title>keyboard_arrow_up</title>
+                        <path d="M7.406 15.422l-1.406-1.406 6-6 6 6-1.406 1.406-4.594-4.594z"></path>
+                    </svg>
+                    Back To Top
+                </a>
+            </section>
+        </div>
     </div>
 </body>
 

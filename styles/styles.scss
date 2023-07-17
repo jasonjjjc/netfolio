@@ -1,20 +1,21 @@
 @import 'reset';
 
 $small: 280px;
-$medium: 576px;
-$large: 768px;
-$extra-large: 992px;
-$extra-extra-large: 1260px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1260px;
 
 :root {
     font-family: Arial, sans-serif;
     color: #333645;
+    letter-spacing: 0.4px;
 }
 
 #wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
+
 
 
     header {
@@ -32,16 +33,70 @@ $extra-extra-large: 1260px;
 
         >svg {
             fill: #333645;
+
+            @media (min-width: $large) {
+                display: none;
+            }
         }
 
-        #initial,
-        #navbar {
-            display: none;
+        &:hover {
+            background-color: rgb(240, 240, 240);
         }
+
+        #nav {
+            display: none;
+            flex-direction: column;
+            padding: 10px 20px 12px 20px;
+
+
+            &-initial {
+                display: block;
+                margin: 50px auto;
+                font-size: 100px;
+            }
+
+            &-bar {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+                padding: 50px 0;
+
+                .nav-bar-item {
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+
+            }
+
+
+            @media (min-width: $large) {
+                display: flex;
+            }
+
+        }
+
+        @media (min-width: $medium) {
+            margin: 25px 25px;
+        }
+
+        @media (min-width: $large) {
+            margin: 0;
+            height: 100vh;
+            border-radius: 0 20px 20px 0;
+            border: 3px solid rgb(250, 250, 250);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+        }
+
+
 
 
     }
 
+    #container {
+        @media (min-width: $large) {
+            padding-left: 198px;
+        }
+    }
 
     #home {
         width: 100%;
@@ -49,15 +104,17 @@ $extra-extra-large: 1260px;
         top: 0;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
         background-color: white;
 
-        padding-top: 200px;
-
-        >div {
+        #intro {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 50vh;
+            // offset y axis
+            transform: translateY(-50%);
 
             .title {
                 margin-bottom: 10px;
@@ -70,8 +127,11 @@ $extra-extra-large: 1260px;
             }
         }
 
-        #home-scroll-text {
+        #home-scroll {
             margin-bottom: -2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
     }
@@ -80,7 +140,7 @@ $extra-extra-large: 1260px;
         padding: 30px 10px;
         display: flex;
         flex-direction: column;
-    
+
         .project {
             background-color: white;
             margin-bottom: 40px;
@@ -88,39 +148,59 @@ $extra-extra-large: 1260px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-    
-            > img {
+
+            >img {
                 width: 100%;
-                border-radius: 4px 4px 0 0;
+                border-radius: 6px;
                 margin-bottom: 5px;
             }
-    
-            > h3 {
-                margin: 10px 0;
+
+            >h3 {
+                margin: 10px 0 10px 10px;
                 font-size: 1.2rem;
+
+                @media (min-width: $medium) {
+                    font-size: 1.5rem;
+                }
+
+                @media (min-width: $large) {
+                    font-size: 1.8rem;
+                }
             }
-    
-            > p {
+
+            >p {
                 font-size: 0.8rem;
+                margin: 0 0 0 12px;
             }
-    
+
             &:hover {
-                transition: transform 0.3s ease, filter 0.3s ease;
-                filter: brightness(100%);
-    
-                > img {
-                    transform: scale(1.05);
+                transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+
+                >img {
+                    transform: scale(1.025);
                     filter: brightness(50%);
+                    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
                 }
             }
         }
-    
+
         @media (min-width: $medium) {
-            padding-left: 40px;
-            padding-right: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @media (min-width: $extra-large) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding-left: 60px;
+            padding-right: 60px;
         }
     }
-    
+
 
     #contact {
         display: flex;
@@ -130,14 +210,15 @@ $extra-extra-large: 1260px;
         &-intro {
 
             >h1 {
-                margin-bottom: 20px;
+                margin-bottom: 40px;
             }
 
             >p {
-                margin-bottom: 20px;
+                margin-bottom: 40px;
 
                 >a {
                     cursor: pointer;
+
                     &:hover {
                         text-decoration: underline;
                     }
@@ -164,53 +245,96 @@ $extra-extra-large: 1260px;
                 input {
                     padding: 15px 20px;
                     border-radius: 4px;
-                    // apply inset shadow
-                    box-shadow: inset 0 0 0 1px rgb(200, 200, 200);
-                    background-color: rgb(210, 210, 210);
+                    border-top: 1px solid rgb(200, 200, 200);
+                    border-right: none;
+                    border-bottom: none;
+                    border-left: none;
+                    outline: 1px solid rgb(210, 210, 210);
+                    background-color: rgb(240, 240, 240);
                     margin-bottom: 20px;
 
                     font-size: 1rem;
                 }
 
                 >div {
-                    display: flex;
-                    flex-direction: column;
+                    display: grid;
+                    grid-template-columns: 1fr;
+
+                    @media (min-width: $medium) {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 20px;
+
+                    }
                 }
+
+
+                textarea {
+                    min-height: 100px;
+                    padding: 15px 20px;
+                    border-radius: 4px;
+                    border-top: 1px solid rgb(200, 200, 200);
+                    border-right: none;
+                    border-bottom: none;
+                    border-left: none;
+                    outline: 1px solid rgb(210, 210, 210);
+                    background-color: rgb(240, 240, 240);
+                    margin-bottom: 20px;
+                    font-size: 1rem;
+                    resize: vertical;
+                    /* Allow vertical resizing */
+                }
+
 
             }
 
             &-submit {
                 align-self: center;
                 width: fit-content;
-                padding: 10px 40px;
-                border: 1px solid black;
+                padding: 15px 40px;
+                border: 2px solid rgb(240, 240, 240);
+                color: #333645;
                 border-radius: 4px;
                 font-size: 1rem;
                 font-weight: 600;
 
+                &:hover {
+                    background-color: rgb(240, 240, 240);
+                }
             }
 
-            
+
 
 
         }
 
+        @media (min-width: $medium) {
+
+            padding: 0 60px;
+
+        }
+
+        @media (min-width: $large) {
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 80px;
+
+        }
 
 
 
     }
 
     #return {
-            align-self: center;
-            width: fit-content;
+        align-self: center;
+        width: fit-content;
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-            margin: 20px auto;
+        margin: 20px auto;
     }
-
-    
 
 }
