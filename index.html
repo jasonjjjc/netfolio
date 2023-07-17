@@ -18,22 +18,22 @@
             <div id="nav">
                 <a id="nav-initial" href="#home">J</a>
                 <ul id="nav-bar">
-                    <li class="nav-bar-item"><a href="#about">About Me</a></li>
-                    <li class="nav-bar-item"><a href="#portfolio">My Portfolio</a></li>
-                    <li class="nav-bar-item"><a href="#code">Coding Examples</a></li>
-                    <li class="nav-bar-item"><a href="#scs">SCS Scheme</a></li>
-                    <li class="nav-bar-item"><a href="#contact">Contact Me</a></li>
+                    <li><a class="nav-bar-item" href="#about">About Me</a></li>
+                    <li><a class="nav-bar-item" href="#portfolio">My Portfolio</a></li>
+                    <li><a class="nav-bar-item" href="#code">Coding Examples</a></li>
+                    <li><a class="nav-bar-item" href="#scs">SCS Scheme</a></li>
+                    <li><a class="nav-bar-item" href="#contact">Contact Me</a></li>
                 </ul>
             </div>
         </header>
         <div id="container">
             <section id="home">
                 <div id="intro">
-                    <h1 class="title">My Name is</h1>
-                    <h1 class="title">Jason Chalangary</h1>
+                    <h1 class="title">Hello!</h1>
+                    <h1 class="title">My name is Jason Chalangary</h1>
                     <h3 id="subtitle">I'm a web developer</h3>
                 </div>
-                <div id="home-scroll">
+                <div id="scroll-down">
                     <p id="home-scroll-text">Scroll Down</p>
                     <svg id="home-scroll-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24">
@@ -42,45 +42,49 @@
                     </svg>
                 </div>
             </section>
-            <section id="portfolio">
-                <a href="#" class="project">
-                    <img src="./assets/thumbnails/netmatters.png" alt="netmatters thumbnail">
-                    <h3>Netmatters</h3>
-                    <p class="view-project">View Project &rarr;</p>
-                </a>
-                <a href="#" class="project">
-                    <img src="./assets/thumbnails/portfolio.png" alt="portfolio thumbnail">
-                    <h3>Portfolio</h3>
-                    <p>View Project &rarr;</p>
-                </a>
-                <a href="#" class="project">
-                    <img src="./assets/thumbnails/carechange.png" alt="CareChange thumbnail">
-                    <h3>CareChange</h3>
-                    <p>View Project &rarr;</p>
-                </a>
-                <a href="#" class="project">
-                    <img src="./assets/thumbnails/letchat.png" alt="LetChat thumbnail">
-                    <h3>LetChat</h3>
-                    <p>View Project &rarr;</p>
-                </a>
-                <a href="#" class="project">
-                    <img src="./assets/thumbnails/flash-it.png" alt="flash-it thumbnail">
-                    <h3>Flash-IT</h3>
-                    <p>View Project &rarr;</p>
-                </a>
-                <a href="#" class="project">
-                    <img src="./assets/thumbnails/minfolio.png" alt="minfolio thumbnail">
-                    <h3>minfolio</h3>
-                    <p>View Project &rarr;</p>
-                </a>
-            </section>
+            <div id="portfolio-wrapper">
+                <section id="portfolio">
+                    <a href="#" class="project">
+                        <img src="./assets/thumbnails/netmatters.png" alt="netmatters thumbnail">
+                        <h3>Netmatters</h3>
+                        <p class="view-project">View Project &rarr;</p>
+                    </a>
+                    <a href="#" class="project">
+                        <img src="./assets/thumbnails/carechange.png" alt="CareChange thumbnail">
+                        <h3>CareChange</h3>
+                        <p>View Project &rarr;</p>
+                    </a>
+                    <a href="#" class="project">
+                        <img src="./assets/thumbnails/portfolio.png" alt="portfolio thumbnail">
+                        <h3>Portfolio</h3>
+                        <p>View Project &rarr;</p>
+                    </a>
+                    <a href="#" class="project">
+                        <img src="./assets/thumbnails/letchat.png" alt="LetChat thumbnail">
+                        <h3>LetChat</h3>
+                        <p>View Project &rarr;</p>
+                    </a>
+                    <a href="#" class="project">
+                        <img src="./assets/thumbnails/flash-it.png" alt="flash-it thumbnail">
+                        <h3>Flash-IT</h3>
+                        <p>View Project &rarr;</p>
+                    </a>
+                    <a href="#" class="project">
+                        <img src="./assets/thumbnails/minfolio.png" alt="minfolio thumbnail">
+                        <h3>minfolio</h3>
+                        <p>View Project &rarr;</p>
+                    </a>
+                </section>
+            </div>
             <section id="contact-wrapper">
                 <div id="contact">
                     <div id="contact-intro">
-                        <h1>Get in Touch</h1>
+                        <h3>Get in Touch</h3>
                         <p>To discuss a project, learn to code, or simply talk about tech, say hey!</p>
-                        <p><a href="tel:'00000000000'">00000 000000</a></p>
-                        <p><a href="mailto:'info@netmatters.com">info@netmatters.com</a></p>
+                        <div id="contact-intro-links">
+                            <a href="tel:'00000000000'" class="button">Call</a>
+                            <a href="mailto:'info@netmatters.com" class="button">Email</a>
+                        </div>
                     </div>
                     <form id="contact-form">
                         <div id="contact-form-inputs">
@@ -92,7 +96,7 @@
                             <input type="text" placeholder="Subject" />
                             <textarea id="contact-form-inputs-message" placeholder="Message*" required></textarea>
                         </div>
-                        <button id="contact-form-submit" type="submit">Submit</button>
+                        <button id="contact-form-submit" type="submit" class="button">Submit</button>
                     </form>
                 </div>
                 <a id="return" href="#home">
