@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Jason Chalangary</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>About Me</title>
 </head>
 
 <body>
@@ -16,12 +16,8 @@
                 <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
             </svg>
             <div id="nav">
-                <a id="nav-initial" href="#home">J</a>
+                <a id="nav-initial" href="../index.html">J</a>
                 <ul id="nav-bar">
-                    <li class="nav-bar-item"><a href="./pages/about-me.html">About Me</a></li>
-                    <li class="nav-bar-item"><a href="#portfolio">My Portfolio</a></li>
-                    <li class="nav-bar-item"><a href="./pages/code.html">Code Examples</a></li>
-                    <li class="nav-bar-item"><a href="./pages/scs.html">SCS Scheme</a></li>
                     <li id="contact-me">Contact Me</li>
                 </ul>
                 <a id="linkedin-button" href="https://linkedin.com/in/jason-chalangary"><svg version="1.1"
@@ -36,11 +32,12 @@
         <div id="container">
             <section id="home">
                 <div id="intro">
-                    <div id="intro-titles">
-                        <h1 class="title">My name is</h1>
-                        <h1 class="title">Jason Chalangary</h1>
+                    <div id="titles">
+                        <h1 class="title">Award-winning</h1>
+                        <h1 class="title">innovator with a</h1>
+                        <h1 class="title">flair for thinking</h1>
+                        <h1 class="title">out of the box</h1>
                     </div>
-                    <h3 id="subtitle">I'm a web developer</h3>
                 </div>
                 <div id="scroll-down">
                     <p id="home-scroll-text">Scroll Down</p>
@@ -51,49 +48,62 @@
                     </svg>
                 </div>
             </section>
-            <div id="portfolio-wrapper">
-                <h3 id="portfolio-title">My Projects</h3>
-                <section id="portfolio">
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/netmatters.png" alt="netmatters thumbnail">
-                        <h3>Netmatters</h3>
-                        <p>View Project &rarr;</p>
+            <div id="about-me-wrapper">
+                <div id="about-me-title">
+                    <h2>Who I am</h2>
+                </div>
+                <section id="about-me">
+                    <a href="https://linkedin.com/in/jason-chalangary" class="review">
+                        <p>"Jason is an exceptional technical problem-solver and logician who possesses great stamina
+                            and
+                            drive. He thrives on tackling challenging problems, breaking them down into manageable
+                            pieces, and finding clean, elegant solutions."</p>
+                        <div class="review-author">
+                            <img class="review-author-image" src="../assets/avatars/emilia.jpeg"
+                                alt="Emilia Williamson" />
+                            <div class="review-author-name">
+                                <h4>Emilia Williamson</h3>
+                                    <p class="review-author-more">Read more &rarr;</p>
+                            </div>
+                        </div>
                     </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/carechange.png" alt="CareChange thumbnail">
-                        <h3>CareChange</h3>
-                        <p>View Project &rarr;</p>
+                    <a href="https://linkedin.com/in/jason-chalangary" class="review">
+                        <p>"Jason is an exceptional team player who consistently brings a positive attitude and strong
+                            work ethic to any project. He is a quick learner who can adapt to new challenges and always
+                            rises to meet the team's needs."</p>
+                        <div class="review-author">
+                            <img class="review-author-image" src="../assets/avatars/julio.jpeg" alt="Julio Velezmoro" />
+                            <div class="review-author-name">
+                                <h4>Julio Velezmoro</h3>
+                                    <p class="review-author-more">Read more &rarr;</p>
+                            </div>
+                        </div>
                     </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/portfolio.png" alt="portfolio thumbnail">
-                        <h3>Portfolio</h3>
-                        <p>View Project &rarr;</p>
-                    </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/letchat.png" alt="LetChat thumbnail">
-                        <h3>LetChat</h3>
-                        <p>View Project &rarr;</p>
-                    </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/flash-it.png" alt="flash-it thumbnail">
-                        <h3>Flash-IT</h3>
-                        <p>View Project &rarr;</p>
-                    </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/minfolio.png" alt="minfolio thumbnail">
-                        <h3>minfolio</h3>
-                        <p>View Project &rarr;</p>
+                    <a href="https://linkedin.com/in/jason-chalangary" class="review">
+                        <p>"I have worked with Jason for a while and can safely say he is the most considerate person
+                            you
+                            could have on your team. He brings technical skill and positive energy to every task. He is
+                            always willing and able to find a way forward whenever challenges present themselves and I
+                            look forward to working with him again in the future."</p>
+                        <div class="review-author">
+                            <img class="review-author-image" src="../assets/avatars/bella.jpeg" alt="Bella Bekanova" />
+                            <div class="review-author-name">
+                                <h4>Bella Bekanova</h3>
+                                    <p class="review-author-more">Read more &rarr;</p>
+                            </div>
+                        </div>
                     </a>
                 </section>
             </div>
+
             <section id="contact-wrapper">
                 <div id="contact">
                     <div id="contact-intro">
                         <h3>Get in Touch</h3>
-                        <p>To discuss a project, learn to code, or talk about tech, say hey!</p>
+                        <p>To discuss a project, learn to code, or simply talk about tech, say hey!</p>
                         <div id="contact-intro-links">
-                            <a href="tel:'00000000000'" class="button">Call</a>
-                            <a href="mailto:'info@netmatters.com" class="button">Email</a>
+                            <a href="tel:'00000000000'">Call</a>
+                            <a href="mailto:'info@netmatters.com">Email</a>
                         </div>
                     </div>
                     <form id="contact-form">
@@ -107,7 +117,7 @@
                             <input type="text" placeholder="Subject" />
                             <textarea id="contact-form-inputs-message" placeholder="Message*" required></textarea>
                         </div>
-                        <button id="contact-form-submit" type="submit" class="button">Submit</button>
+                        <button id="contact-form-submit" type="submit">Submit</button>
                     </form>
                 </div>
                 <a id="return" href="#home">
