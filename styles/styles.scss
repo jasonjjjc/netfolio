@@ -4,6 +4,8 @@ $small: 280px;
 $medium: 768px;
 $large: 992px;
 $extra-large: 1260px;
+$extra-extra-large: 1560px;
+
 
 :root {
     font-family: Arial, sans-serif;
@@ -18,7 +20,7 @@ $extra-large: 1260px;
     flex-direction: column;
 
 
-
+    // menu button that becomes a fixed bar on the left of the screen
     header {
         position: fixed;
         top: 0;
@@ -80,13 +82,6 @@ $extra-large: 1260px;
                     }
                 }
 
-                #contact-me {
-                    width: 100%;
-                    border-top: 2px solid rgb(240, 240, 240);
-                    padding: 40px 15px 0 15px;
-                    font-weight: 600;
-                }
-
 
 
             }
@@ -142,6 +137,7 @@ $extra-large: 1260px;
 
     }
 
+    // setting padding on various screen sizes using a single container div
     #container {
 
         @media (min-width: $small) {
@@ -163,6 +159,7 @@ $extra-large: 1260px;
         }
     }
 
+    // start of every page
     #home {
         width: 100%;
         height: 100vh;
@@ -181,15 +178,18 @@ $extra-large: 1260px;
             transform: translateY(-50%);
 
             &-titles {
-                
-                
+
+
                 .title {
                     padding: 10px 0;
 
                     @media (min-width: $extra-large) {
                         font-size: 2.5rem;
-                        line-height: 2em;
                     }
+                }
+
+                @media (min-width: $extra-large) {
+                    padding-bottom: 20px;
                 }
             }
         }
@@ -347,6 +347,7 @@ $extra-large: 1260px;
                     }
 
                     &-name {
+                        padding-top: 12px;
                         display: flex;
                         flex-direction: column;
                         gap: 2px;
@@ -378,11 +379,184 @@ $extra-large: 1260px;
 
             }
 
+            @media (min-width: $extra-large) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 1200px;
+                padding-bottom: 60px;
+            }
+
         }
 
 
     }
 
+    // code examples for the code page
+    #code-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #code-title {
+            display: flex;
+            justify-content: center;
+            margin: 40px;
+
+            @media (min-width: $extra-large) {
+                width: 100%;
+                max-width: 1200px;
+            }
+        }
+
+        #code {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .example {
+                border-radius: 4px;
+                box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                >img {
+                    width: 100%;
+                }
+
+
+                >p {
+                    line-height: 1.5em;
+                }
+
+                .code-author {
+                    display: flex;
+                    gap: 20px;
+                    padding: 20px;
+
+
+                    &-image {
+                        display: none;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+
+                        @media (min-width: $medium) {
+                            display: block;
+                        }
+                    }
+
+                    &-quote {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        line-height: 1.5rem;
+                    }
+
+                    &-more {
+                        font-size: 0.8rem;
+                    }
+
+                    @media (min-width: $medium) {
+                        padding-top: 40px;
+                        padding-bottom: 0;
+                    }
+
+
+                }
+
+                &:hover {
+                    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+
+                    transform: scale(1.025);
+                    filter: brightness(95%);
+                    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
+                }
+
+                @media (min-width: $medium) {
+                    border-radius: 6px;
+                    padding: 40px;
+
+                }
+
+            }
+
+            @media (min-width: $extra-extra-large) {
+                width: 1200px;
+            }
+
+        }
+
+
+    }
+
+    // scion coalition scheme for the current page
+    #current-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #current-title {
+            display: flex;
+            justify-content: center;
+            margin: 40px;
+
+            @media (min-width: $extra-large) {
+                width: 100%;
+                max-width: 1200px;
+            }
+        }
+
+        #current {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .summary {
+                border-radius: 4px;
+                box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                >h4 {
+                    padding: 20px 0;
+                }
+
+                >p {
+                    padding: 20px 0;
+                }
+
+
+                &:hover {
+                    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+
+                    transform: scale(1.025);
+                    filter: brightness(95%);
+                    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
+                }
+
+                @media (min-width: $medium) {
+                    border-radius: 6px;
+                    padding: 40px;
+
+                }
+
+            }
+
+            @media (min-width: $extra-extra-large) {
+                width: 1200px;
+            }
+
+        }
+
+    }
+
+    // contact me form for the home page
     #contact-wrapper {
 
         display: flex;
@@ -392,7 +566,7 @@ $extra-large: 1260px;
         #contact {
             display: flex;
             flex-direction: column;
-            gap: 40px; 
+            gap: 40px;
 
             &-intro {
                 display: flex;

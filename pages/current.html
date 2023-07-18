@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Jason Chalangary</title>
+    <title>Currently Working On</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-
 <body>
     <div id="wrapper">
         <header>
@@ -16,12 +14,8 @@
                 <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
             </svg>
             <div id="nav">
-                <a id="nav-initial" href="#home">J</a>
+                <a id="nav-initial" href="../index.html">J</a>
                 <ul id="nav-bar">
-                    <li class="nav-bar-item"><a href="./pages/about-me.html">About Me</a></li>
-                    <li class="nav-bar-item"><a href="#portfolio-wrapper">My Portfolio</a></li>
-                    <li class="nav-bar-item"><a href="./pages/code.html">Code Examples</a></li>
-                    <li class="nav-bar-item"><a href="./pages/current.html">SCS Scheme</a></li>
                     <li class="nav-bar-item"><a href="#contact-wrapper">Contact Me</a></li>
                 </ul>
                 <a id="linkedin-button" href="https://linkedin.com/in/jason-chalangary"><svg version="1.1"
@@ -36,11 +30,9 @@
         <div id="container">
             <section id="home">
                 <div id="intro">
-                    <div id="intro-titles">
-                        <h1 class="title">My name is</h1>
-                        <h1 class="title">Jason Chalangary</h1>
+                    <div id="titles">
+                        <h1 class="title">Currently working on</h1>
                     </div>
-                    <h3 id="subtitle">I'm a web developer</h3>
                 </div>
                 <div id="scroll-down">
                     <p id="home-scroll-text">Scroll Down</p>
@@ -51,38 +43,31 @@
                     </svg>
                 </div>
             </section>
-            <div id="portfolio-wrapper">
-                <h3 id="portfolio-title">My Projects</h3>
-                <section id="portfolio">
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/netmatters.png" alt="netmatters thumbnail">
-                        <h3>Netmatters</h3>
-                        <p>View Project &rarr;</p>
+            <div id="current-wrapper">
+                <div id="current-title">
+                    <h2>Scion Coalition Scheme</h2>
+                </div>
+                <section id="current">
+                    <a href="https://www.netmatters.co.uk/scions-coalition-scheme" class="summary">
+                        <h4>Introduction</h4>
+                       <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. Under the supervision of senior web developers, scions generally aim to complete training within six to nine months. The course is intensive and therefore the level of learning achieved is extensive in a short space of time.</p>
                     </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/carechange.png" alt="CareChange thumbnail">
-                        <h3>CareChange</h3>
-                        <p>View Project &rarr;</p>
+                    <a href="https://teamtreehouse.com/" class="summary">
+                        <h4>Treehouse</h4>
+                        <p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML to C# programming, iOS development, data analysis, and more. By completing courses users can earn points, allowing them to track their progress and see how much they?ve covered in certain areas.</p>
                     </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/portfolio.png" alt="portfolio thumbnail">
-                        <h3>Portfolio</h3>
-                        <p>View Project &rarr;</p>
-                    </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/letchat.png" alt="LetChat thumbnail">
-                        <h3>LetChat</h3>
-                        <p>View Project &rarr;</p>
-                    </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/flash-it.png" alt="flash-it thumbnail">
-                        <h3>Flash-IT</h3>
-                        <p>View Project &rarr;</p>
-                    </a>
-                    <a href="#" class="project">
-                        <img src="./assets/thumbnails/minfolio.png" alt="minfolio thumbnail">
-                        <h3>minfolio</h3>
-                        <p>View Project &rarr;</p>
+                    <a href="https://github.com/jasonjjjc" class="summary">
+                        <h4>About Netmatters</h4>
+                        <ul>
+                            <li>Established in 2008</li>
+                            <li>Norfolk's leading technology company</li>
+                            <li>Winner of the Princess Royal Training Award</li>
+                            <li>Winner of EDP Skills of Tomorrow Award</li>
+                            <li>80+ staff, 2 locations across Norfolk</li>
+                            <li>Digital Marketing, Website & Software development & IT Support</li>
+                            <li>Broad spectrum of clients, working nationwide</li>
+                            <li>Operate to strict company values</li>
+                        </ul>
                     </a>
                 </section>
             </div>
@@ -90,10 +75,10 @@
                 <div id="contact">
                     <div id="contact-intro">
                         <h3>Get in Touch</h3>
-                        <p>To discuss a project, learn to code, or talk about tech, say hey!</p>
+                        <p>To discuss a project, learn to code, or simply talk about tech, say hey!</p>
                         <div id="contact-intro-links">
-                            <a href="tel:'00000000000'" class="button">Call</a>
-                            <a href="mailto:'info@netmatters.com" class="button">Email</a>
+                            <a href="tel:'00000000000'">Call</a>
+                            <a href="mailto:'info@netmatters.com">Email</a>
                         </div>
                     </div>
                     <form id="contact-form">
@@ -107,7 +92,7 @@
                             <input type="text" placeholder="Subject" />
                             <textarea id="contact-form-inputs-message" placeholder="Message*" required></textarea>
                         </div>
-                        <button id="contact-form-submit" type="submit" class="button">Submit</button>
+                        <button id="contact-form-submit" type="submit">Submit</button>
                     </form>
                 </div>
                 <a id="return" href="#home">
@@ -121,5 +106,4 @@
         </div>
     </div>
 </body>
-
 </html>
