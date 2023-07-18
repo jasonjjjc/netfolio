@@ -57,7 +57,7 @@ $extra-extra-large: 1560px;
                 display: block;
                 padding: 30px 60px 30px 60px;
                 margin-top: 3px;
-                border-radius: 0 20px 20px 0;
+                border-radius: 0 20px 0 0;
                 font-size: 100px;
 
                 &:hover {
@@ -70,9 +70,9 @@ $extra-extra-large: 1560px;
                 flex-direction: column;
                 gap: 20px;
                 padding-top: 20px;
+                padding-bottom: 20px;
 
                 .nav-bar-item {
-                    border-radius: 0 6px 6px 0;
                     padding: 15px 0 15px 15px;
                     font-weight: 600;
                     cursor: pointer;
@@ -90,7 +90,7 @@ $extra-extra-large: 1560px;
                 display: flex;
                 justify-content: center;
                 padding: 50px;
-                border-radius: 0 0 15px 0;
+                border-radius: 0 0 20px 0;
 
                 >svg {
                     height: 50px;
@@ -187,9 +187,13 @@ $extra-extra-large: 1560px;
                         font-size: 2.5rem;
                     }
                 }
+            }
+
+            #subtitle {
+                padding: 10px 0;
 
                 @media (min-width: $extra-large) {
-                    padding-bottom: 20px;
+                    font-size: 1.5rem;
                 }
             }
         }
