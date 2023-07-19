@@ -78,9 +78,13 @@ $md-lg-1: 1160px;
                 justify-content: space-between;
 
                 .nav-bar-item {
-                    padding: 15px 10px 15px 15px;
                     font-weight: 600;
                     cursor: pointer;
+
+                    >a {
+                        display: block;
+                        padding: 15px 10px 15px 15px;
+                    }
 
                     &:hover {
                         background-color: rgb(240, 240, 240);
@@ -199,7 +203,7 @@ $md-lg-1: 1160px;
             }
 
             @media (min-width: $sm-md-2) {
-               right: -39vw;
+                right: -39vw;
             }
 
             @media (min-width: $md-lg-1) {
