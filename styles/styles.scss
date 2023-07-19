@@ -10,7 +10,7 @@ $extra-extra-large: 1560px;
 $sm-1: 320px;
 $sm-md-1: 460px;
 $sm-md-2: 710px;
-$md-lg-1: 1160px;
+$md-lg-1: 1116px;
 
 :root {
     font-family: Arial, sans-serif;
@@ -199,15 +199,15 @@ $md-lg-1: 1160px;
             }
 
             @media (min-width: $sm-md-1) {
-                right: -58vw;
+                right: -80vw;
             }
 
             @media (min-width: $sm-md-2) {
-                right: -39vw;
+                right: -75vw;
             }
 
             @media (min-width: $md-lg-1) {
-                right: -20vw;
+                right: -50vw;
             }
 
         }
