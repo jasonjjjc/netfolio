@@ -6,6 +6,11 @@ $large: 992px;
 $extra-large: 1260px;
 $extra-extra-large: 1560px;
 
+// just for the background image on the home page
+$sm-1: 320px;
+$sm-md-1: 460px;
+$sm-md-2: 710px;
+$md-lg-1: 1160px;
 
 :root {
     font-family: Arial, sans-serif;
@@ -54,11 +59,13 @@ $extra-extra-large: 1560px;
 
 
             &-initial {
-                display: block;
-                padding: 30px 60px 30px 60px;
+                display: flex;
+                justify-content: center;
                 margin-top: 16px;
                 border-radius: 0 20px 0 0;
-                font-size: 100px;
+                padding: 20px 0;
+                width: 100%;
+                font-size: 50px;
 
                 &:hover {
                     background-color: rgb(240, 240, 240);
@@ -68,12 +75,10 @@ $extra-extra-large: 1560px;
             &-bar {
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
-                padding-top: 20px;
-                padding-bottom: 20px;
+                justify-content: space-between;
 
                 .nav-bar-item {
-                    padding: 15px 0 15px 15px;
+                    padding: 15px 10px 15px 15px;
                     font-weight: 600;
                     cursor: pointer;
 
@@ -89,7 +94,8 @@ $extra-extra-large: 1560px;
             #linkedin-button {
                 display: flex;
                 justify-content: center;
-                padding: 50px;
+                padding: 20px 0;
+                width: 100%;
                 border-radius: 0 0 20px 0;
 
                 >svg {
@@ -118,7 +124,7 @@ $extra-extra-large: 1560px;
         @media (min-width: $large) {
             margin: 0;
             padding-left: 0;
-            padding-right: 25px;
+            padding-right: 50px;
             height: 100vh;
             border-radius: 0 20px 20px 0;
             border-right: 3px solid rgb(250, 250, 250);
@@ -139,6 +145,7 @@ $extra-extra-large: 1560px;
 
     // setting padding on various screen sizes using a single container div
     #container {
+        overflow: hidden;
 
         @media (min-width: $small) {
             padding: 0 20px;
@@ -161,21 +168,53 @@ $extra-extra-large: 1560px;
 
     // start of every page
     #home {
+        position: relative;
         width: 100%;
         height: 100vh;
-        top: 0;
         background-color: white;
         display: flex;
         flex-direction: column;
-
         justify-content: space-between;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            height: 54%;
+            left: 0;
+            right: -130vw;
+            background-image: url('../assets/icons/tools.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 1;
+            transform: scaleX(-1);
+            z-index: 1;
+
+            @media (min-width: $sm-1) {
+                right: -90vw;
+            }
+
+            @media (min-width: $sm-md-1) {
+                right: -58vw;
+            }
+
+            @media (min-width: $sm-md-2) {
+               right: -39vw;
+            }
+
+            @media (min-width: $md-lg-1) {
+                right: -20vw;
+            }
+
+        }
+
 
         #intro {
             display: flex;
             flex-direction: column;
-            margin-top: 50vh;
-            // offset y axis
-            transform: translateY(-50%);
+            margin-top: 5vh;
+            height: 40vh;
+            justify-content: center;
 
             &-titles {
 
@@ -196,13 +235,23 @@ $extra-extra-large: 1560px;
                     font-size: 1.5rem;
                 }
             }
+
+            @media (min-width: $medium) {
+                margin-top: 10vh;
+                height: 35vh;
+            }
         }
 
         #scroll-down {
-            margin-bottom: 20px;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 6px 6px 0 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: white;
+            z-index: 2;
         }
 
         @media (min-width: $extra-large) {
@@ -526,6 +575,7 @@ $extra-extra-large: 1560px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                max-width: 768px;
 
                 >h4 {
                     padding: 20px 0;
@@ -533,6 +583,13 @@ $extra-extra-large: 1560px;
 
                 >p {
                     padding: 20px 0;
+                    line-height: 1.5em;
+                }
+
+                >ul {
+                    >li {
+                        padding: 5px 0;
+                    }
                 }
 
 
