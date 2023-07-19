@@ -61,7 +61,7 @@ $md-lg-1: 1160px;
             &-initial {
                 display: flex;
                 justify-content: center;
-                margin-top: 16px;
+                margin-top: 40px;
                 border-radius: 0 20px 0 0;
                 padding: 20px 0;
                 width: 100%;
@@ -128,8 +128,9 @@ $md-lg-1: 1160px;
         @media (min-width: $large) {
             margin: 0;
             padding-left: 0;
-            padding-right: 50px;
+            padding-right: 40px;
             height: 100vh;
+            width: 200px;
             border-radius: 0 20px 20px 0;
             border-right: 3px solid rgb(250, 250, 250);
             border-left: 0;
