@@ -7,8 +7,8 @@ $extra-large: 1260px;
 $extra-extra-large: 1560px;
 
 // just for the background image on the home page
-$sm-1: 320px;
-$sm-md-1: 460px;
+$sm-1: 410px;
+$sm-md-1: 560px;
 $sm-md-2: 710px;
 $md-lg-1: 1116px;
 
@@ -186,29 +186,17 @@ $md-lg-1: 1116px;
             bottom: 2px;
             height: 54%;
             left: 0;
-            right: -130vw;
+            right: -85vw;
             background-image: url('../assets/icons/tools.png');
             background-repeat: no-repeat;
             background-size: contain;
             opacity: 1;
-            transform: scaleX(-1);
             z-index: 1;
 
             @media (min-width: $sm-1) {
-                right: -90vw;
+                left: 20vw;
             }
 
-            @media (min-width: $sm-md-1) {
-                right: -80vw;
-            }
-
-            @media (min-width: $sm-md-2) {
-                right: -75vw;
-            }
-
-            @media (min-width: $md-lg-1) {
-                right: -50vw;
-            }
 
         }
 
@@ -216,8 +204,8 @@ $md-lg-1: 1116px;
         #intro {
             display: flex;
             flex-direction: column;
-            margin-top: 5vh;
-            height: 40vh;
+            margin-top: 10vh;
+            height: 35vh;
             justify-content: center;
 
             &-titles {
