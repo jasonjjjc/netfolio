@@ -55,21 +55,40 @@ $extra-extra-large: 1560px;
         position: fixed;
         top: 0;
         z-index: 1;
-        margin: 15px 15px;
-        display: flex;
-        flex-direction: column;
-        padding: 5px 10px 7px 10px;
-        border-radius: 5px;
-        border: 2px solid rgb(250, 250, 250);
-        background-color: white;
+        margin: 10px;
 
+        #menu-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 5px 10px 7px 10px;
+            border-radius: 5px;
+            border: 2px solid rgb(250, 250, 250);
+            background-color: white;
+            width: fit-content;
 
-        >svg {
-            fill: #333645;
+            >svg {
+                fill: #333645;
+
+                @media (min-width: $large) {
+                    display: none;
+                }
+
+            }
+
+            @media (prefers-color-scheme: dark) {
+                background-color: rgb(30, 30, 30);
+                border: 1px solid rgb(255, 254, 240);
+                opacity: 0.7;
+
+                >svg {
+                    fill: rgb(255, 254, 240);
+                }
+            }
 
             @media (min-width: $large) {
                 display: none;
             }
+
 
         }
 
@@ -77,7 +96,7 @@ $extra-extra-large: 1560px;
         #nav {
             display: none;
             flex-direction: column;
-
+            margin-top: 15px;
 
             &-initial {
                 display: flex;
@@ -119,13 +138,13 @@ $extra-extra-large: 1560px;
 
                     >a {
                         display: block;
-                        padding: 15px 10px 15px 15px;
+                        padding: 15px 50px 15px 15px;
 
                         &:hover {
                             background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
                             background-position: 40% 50%;
                             color: rgb(255, 254, 240);
-    
+
                         }
 
                         @media (prefers-color-scheme: dark) {
@@ -137,11 +156,15 @@ $extra-extra-large: 1560px;
                                 background-color: transparent;
                             }
                         }
+
+                        @media (min-width: $large) {
+                            padding: 15px 10px 15px 15px;
+                        }
                     }
 
-                    
 
-                    
+
+
 
 
                 }
@@ -190,15 +213,10 @@ $extra-extra-large: 1560px;
 
         }
 
-        @media (prefers-color-scheme: dark) {
-            background-color: rgb(30, 30, 30);
-             border: 1px solid rgb(255, 254, 240);
-             opacity: 0.7;
-
-             >svg {
-                    fill: rgb(255, 254, 240);
-             }
+        #nav.nav-active {
+            display: flex;
         }
+
 
         @media (min-width: $medium) {
             margin: 25px 25px;
@@ -216,6 +234,10 @@ $extra-extra-large: 1560px;
             border-bottom: 0;
             box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.2);
             background-color: transparent;
+
+            @media (prefers-color-scheme: dark) {
+                border-right: 3px solid rgb(255, 254, 240);
+            }
         }
 
 
