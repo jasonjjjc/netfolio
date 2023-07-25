@@ -17,7 +17,6 @@ let menuWrapper = document.getElementById('menu-wrapper');
 let navBar = document.getElementById('nav');
 
 menuWrapper.addEventListener('click', () => {
-  console.log('clicked');
   // Toggle the "nav-active" class on the "navBar" element
   navBar.classList.toggle('nav-active');
 });
