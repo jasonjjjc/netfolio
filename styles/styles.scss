@@ -248,6 +248,7 @@ $extra-extra-large: 1560px;
 
         @media (prefers-color-scheme: dark) {
             border-right: 3px solid rgb(255, 254, 240);
+            background-color: rgb(30, 30, 30);
         }
 
         #nav {
@@ -255,6 +256,10 @@ $extra-extra-large: 1560px;
             position: absolute;
             top: 0;
             left: 0;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: rgb(30, 30, 30);
+            }   
         }
 
         @media (min-width: $medium) {
@@ -408,6 +413,10 @@ $extra-extra-large: 1560px;
             #portfolio-title {
                 font-size: 1.5rem;
 
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                }
+
                 @media (min-width: $medium) {
                     font-size: 2rem;
                 }
@@ -441,12 +450,19 @@ $extra-extra-large: 1560px;
                             font-size: 1.5rem;
                         }
 
+                        @media (prefers-color-scheme: dark) {
+                            background-color: transparent;
+                        }
 
                     }
 
                     >p {
                         font-size: 0.8rem;
                         padding: 0 0 0 20px;
+
+                        @media (prefers-color-scheme: dark) {
+                            background-color: transparent;
+                        }
 
                     }
 
@@ -468,6 +484,10 @@ $extra-extra-large: 1560px;
 
                 }
 
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                }
+
                 @media (min-width: $medium) {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
@@ -487,6 +507,10 @@ $extra-extra-large: 1560px;
                 }
 
 
+            }
+
+            @media (prefers-color-scheme: dark) {
+                background-color: transparent;
             }
 
             @media (min-width: $extra-extra-large) {
@@ -536,6 +560,10 @@ $extra-extra-large: 1560px;
                 margin: 40px;
                 font-size: 1.5rem;
 
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                }
+
                 @media (min-width: $medium) {
                     font-size: 2rem;
                 }
@@ -558,6 +586,10 @@ $extra-extra-large: 1560px;
 
                     >p {
                         line-height: 1.5em;
+
+                        @media (prefers-color-scheme: dark) {
+                            background-color: transparent;
+                        }
                     }
 
                     .review-author {
@@ -577,12 +609,29 @@ $extra-extra-large: 1560px;
                             flex-direction: column;
                             gap: 2px;
                             line-height: 1.5rem;
+
+                            >h4 {
+                                @media (prefers-color-scheme: dark) {
+                                    background-color: transparent;
+                                }
+                            }
+
+                            @media (prefers-color-scheme: dark) {
+                                background-color: transparent;
+                            }
                         }
 
                         &-more {
                             font-size: 0.8rem;
+
+                            @media (prefers-color-scheme: dark) {
+                                background-color: transparent;
+                            }
                         }
 
+                        @media (prefers-color-scheme: dark) {
+                            background-color: transparent;
+                        }
 
                     }
 
@@ -604,6 +653,10 @@ $extra-extra-large: 1560px;
 
                 }
 
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                }
+
                 @media (min-width: $extra-large) {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
@@ -613,6 +666,12 @@ $extra-extra-large: 1560px;
                     padding-bottom: 60px;
                 }
 
+                
+
+            }
+
+            @media (prefers-color-scheme: dark) {
+                background-color: transparent;
             }
         }
 
@@ -661,6 +720,10 @@ $extra-extra-large: 1560px;
             #code-title {
                 font-size: 1.5rem;
 
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                }
+
                 @media (min-width: $medium) {
                     font-size: 2rem;
                 }
@@ -678,7 +741,7 @@ $extra-extra-large: 1560px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    background-color: rgba(0, 0, 0, 0.5);
+                    background-color: rgba(0, 0, 0, 0.7);
                     padding-bottom: 20px;
                     
                     >img {
@@ -688,6 +751,8 @@ $extra-extra-large: 1560px;
 
                     >p {
                         line-height: 1.5em;
+
+                        
                     }
 
                     .code-author {
@@ -712,10 +777,28 @@ $extra-extra-large: 1560px;
                             flex-direction: column;
                             gap: 10px;
                             line-height: 1.5rem;
+
+                                >h4 {
+                                    @media (prefers-color-scheme: dark) {
+                                        background-color: transparent;
+                                    }
+                                }
+
+                                @media (prefers-color-scheme: dark) {
+                                    background-color: transparent;
+                                }
                         }
 
                         &-more {
                             font-size: 0.8rem;
+
+                            @media (prefers-color-scheme: dark) {
+                                background-color: transparent;
+                            }
+                        }
+
+                        @media (prefers-color-scheme: dark) {
+                            background-color: transparent;
                         }
 
                         @media (min-width: $medium) {
@@ -734,6 +817,8 @@ $extra-extra-large: 1560px;
                         box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
                     }
 
+                    
+
                     @media (min-width: $medium) {
                         border-radius: 6px;
 
@@ -741,10 +826,18 @@ $extra-extra-large: 1560px;
 
                 }
 
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                }
+
                 @media (min-width: $extra-extra-large) {
                     width: 1200px;
                 }
 
+            }
+
+            @media (prefers-color-scheme: dark) {
+                background-color: transparent;
             }
 
             @media (min-width: $extra-extra-large) {
@@ -796,6 +889,10 @@ $extra-extra-large: 1560px;
             #current-title {
                 font-size: 1.5rem;
 
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                }
+
                 @media (min-width: $medium) {
                     font-size: 2rem;
                 }
@@ -817,15 +914,29 @@ $extra-extra-large: 1560px;
 
                     >h4 {
                         padding: 20px 0;
+                        @media (prefers-color-scheme: dark) {
+                            background-color: transparent;
+                        }
                     }
 
                     >p {
                         line-height: 1.5em;
+                        @media (prefers-color-scheme: dark) {
+                            background-color: transparent;
+                        }
                     }
 
                     >ul {
                         >li {
                             padding: 5px 0;
+
+                            @media (prefers-color-scheme: dark) {
+                                background-color: transparent;
+                            }
+                        }
+
+                        @media (prefers-color-scheme: dark) {
+                            background-color: transparent;
                         }
                     }
 
@@ -846,6 +957,10 @@ $extra-extra-large: 1560px;
 
                 }
 
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                }
+
                 @media (min-width: $extra-large) {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
@@ -856,6 +971,10 @@ $extra-extra-large: 1560px;
                     width: 1200px;
                 }
 
+            }
+
+            @media (prefers-color-scheme: dark) {
+                background-color: transparent;
             }
 
             @media (min-width: $extra-extra-large) {
