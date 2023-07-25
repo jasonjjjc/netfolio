@@ -1,3 +1,5 @@
+// jquery function for the home section background image effect
+
 $(document).ready(function () {
   var mouseX, mouseY;
   var ww = $(window).width();
@@ -13,6 +15,11 @@ $(document).ready(function () {
   });
 });
 
+
+
+
+// make the header menu appear and disappear when the menu button is clicked
+
 let menuWrapper = document.getElementById('menu-wrapper');
 let header = document.getElementById('header');
 
@@ -21,14 +28,19 @@ menuWrapper.addEventListener('click', () => {
   header.classList.toggle('is-active');
 });
 
-// JavaScript code to toggle the 'is-active' class when the screen width is large or wider
+
+
+
+
+// toggle the is-active class on the header element when the screen width is large or wider
+
 function toggleIsActiveClass() {
   const header = document.getElementById('header');
   const screenWidth = window.innerWidth;
 
-  // Replace 'largeScreenWidth' with your desired screen width breakpoint in pixels
   const largeScreenWidth = 992;
-
+  
+  // only add the is-active class if the screen width is greater than or equal to 992px and the is-active class is not already present
   if (screenWidth >= largeScreenWidth && !header.classList.contains('is-active')) {
     header.classList.add('is-active');
   }

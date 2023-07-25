@@ -9,19 +9,25 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <header>
-            <svg id="menu" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                <title>menu</title>
-                <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
-            </svg>
+    <div id="container">
+        <header id="header">
+            <div id="menu-wrapper">
+                <svg id="menu" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32">
+                    <title>menu</title>
+                    <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+                </svg>
+            </div>
             <div id="nav">
-                <a id="nav-initial" href="../index.html"><h1>J</h1></a>
+                <a id="nav-initial" class="title" href="../index.html">
+                    <h1>J</h1>
+                </a>
                 <ul id="nav-bar">
-                    <li class="nav-bar-item"><a href="#contact-wrapper">Contact Me</a></li>
+                    <li class="nav-bar-item"><a class="title" href="#contact-wrapper">Contact Me</a></li>
                 </ul>
-                <a id="linkedin-button" href="https://linkedin.com/in/jason-chalangary"><svg version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+                <a id="linkedin-button" class="title" href="https://linkedin.com/in/jason-chalangary"
+                    target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="28"
+                        viewBox="0 0 24 28">
                         <title>linkedin</title>
                         <path
                             d="M5.453 9.766v15.484h-5.156v-15.484h5.156zM5.781 4.984c0.016 1.484-1.109 2.672-2.906 2.672v0h-0.031c-1.734 0-2.844-1.188-2.844-2.672 0-1.516 1.156-2.672 2.906-2.672 1.766 0 2.859 1.156 2.875 2.672zM24 16.375v8.875h-5.141v-8.281c0-2.078-0.75-3.5-2.609-3.5-1.422 0-2.266 0.953-2.641 1.875-0.125 0.344-0.172 0.797-0.172 1.266v8.641h-5.141c0.063-14.031 0-15.484 0-15.484h5.141v2.25h-0.031c0.672-1.062 1.891-2.609 4.672-2.609 3.391 0 5.922 2.219 5.922 6.969z">
@@ -29,108 +35,121 @@
                     </svg></a>
             </div>
         </header>
-        <div id="container">
-            <section id="home">
-                <div id="intro">
-                    <div id="intro-titles">
-                        <h1 class="title">Award-winning</h1>
-                        <h1 class="title">innovator with a</h1>
-                        <h1 class="title">flair for thinking</h1>
-                        <h1 class="title">out of the box</h1>
+        <div id="main">
+            <section id="home-wrapper">
+                <div id="home-content">
+                    <div id="intro">
+                        <div id="intro-titles">
+                            <h1 class="title">Award-winning</h1>
+                            <h1 class="title">innovator with a</h1>
+                            <h1 class="title">flair for thinking</h1>
+                            <h1 class="title">outside the box</h1>
+                        </div>
+                    </div>
+                    <div id="scroll-down">
+                        <p id="home-scroll-text">Scroll Down</p>
+                        <svg id="home-scroll-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <title>keyboard_arrow_down</title>
+                            <path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path>
+                        </svg>
                     </div>
                 </div>
-                <div id="scroll-down">
-                    <p id="home-scroll-text">Scroll Down</p>
-                    <svg id="home-scroll-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24">
-                        <title>keyboard_arrow_down</title>
-                        <path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path>
-                    </svg>
-                </div>
             </section>
-            <div id="about-me-wrapper">
-                <div id="about-me-title">
-                    <h2>Who I am</h2>
+            <div id="about-me-wrapper" class="title">
+                <div id="about-me-content">
+                    <h3 id="about-me-title">Who I am</h3>
+                    <section id="about-me">
+                        <a href="https://linkedin.com/in/jason-chalangary" target="_blank" class="review">
+                            <p>"Jason is an exceptional technical problem-solver and logician who possesses great
+                                stamina
+                                and
+                                drive. He thrives on tackling challenging problems, breaking them down into manageable
+                                pieces, and finding clean, elegant solutions."</p>
+                            <div class="review-author">
+                                <img class="review-author-image" src="../assets/avatars/emilia.jpeg"
+                                    alt="Emilia Williamson" />
+                                <div class="review-author-name">
+                                    <h4>Emilia Williamson</h4>
+                                    <p class="review-author-more">Read more &rarr;</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/jason-chalangary" target="_blank" class="review">
+                            <p>"Jason is an exceptional team player who consistently brings a positive attitude and
+                                strong
+                                work ethic to any project. He is a quick learner who can adapt to new challenges and
+                                always
+                                rises to meet the team's needs."</p>
+                            <div class="review-author">
+                                <img class="review-author-image" src="../assets/avatars/julio.jpeg"
+                                    alt="Julio Velezmoro" />
+                                <div class="review-author-name">
+                                    <h4>Julio Velezmoro</h4>
+                                    <p class="review-author-more">Read more &rarr;</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/jason-chalangary" target="_blank" class="review">
+                            <p>"I have worked with Jason for a while and can safely say he is the most considerate
+                                person
+                                you
+                                could have on your team. He brings technical skill and positive energy to every task. He
+                                is
+                                always willing and able to find a way forward whenever challenges present themselves and
+                                I
+                                look forward to working with him again in the future."</p>
+                            <div class="review-author">
+                                <img class="review-author-image" src="../assets/avatars/bella.jpeg"
+                                    alt="Bella Bekanova" />
+                                <div class="review-author-name">
+                                    <h4>Bella Bekanova</h4>
+                                    <p class="review-author-more">Read more &rarr;</p>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
                 </div>
-                <section id="about-me">
-                    <a href="https://linkedin.com/in/jason-chalangary" class="review">
-                        <p>"Jason is an exceptional technical problem-solver and logician who possesses great stamina
-                            and
-                            drive. He thrives on tackling challenging problems, breaking them down into manageable
-                            pieces, and finding clean, elegant solutions."</p>
-                        <div class="review-author">
-                            <img class="review-author-image" src="../assets/avatars/emilia.jpeg"
-                                alt="Emilia Williamson" />
-                            <div class="review-author-name">
-                                <h4>Emilia Williamson</h4>
-                                    <p class="review-author-more">Read more &rarr;</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://linkedin.com/in/jason-chalangary" class="review">
-                        <p>"Jason is an exceptional team player who consistently brings a positive attitude and strong
-                            work ethic to any project. He is a quick learner who can adapt to new challenges and always
-                            rises to meet the team's needs."</p>
-                        <div class="review-author">
-                            <img class="review-author-image" src="../assets/avatars/julio.jpeg" alt="Julio Velezmoro" />
-                            <div class="review-author-name">
-                                <h4>Julio Velezmoro</h4>
-                                    <p class="review-author-more">Read more &rarr;</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://linkedin.com/in/jason-chalangary" class="review">
-                        <p>"I have worked with Jason for a while and can safely say he is the most considerate person
-                            you
-                            could have on your team. He brings technical skill and positive energy to every task. He is
-                            always willing and able to find a way forward whenever challenges present themselves and I
-                            look forward to working with him again in the future."</p>
-                        <div class="review-author">
-                            <img class="review-author-image" src="../assets/avatars/bella.jpeg" alt="Bella Bekanova" />
-                            <div class="review-author-name">
-                                <h4>Bella Bekanova</h4>
-                                    <p class="review-author-more">Read more &rarr;</p>
-                            </div>
-                        </div>
-                    </a>
-                </section>
             </div>
 
             <section id="contact-wrapper">
-                <div id="contact">
-                    <div id="contact-intro">
-                        <h3>Get in Touch</h3>
-                        <p>To discuss a project, learn to code, or simply talk about tech, say hi!</p>
-                        <div id="contact-intro-links">
-                            <a href="tel:'00000000000'">Call</a>
-                            <a href="mailto:'info@netmatters.com">Email</a>
-                        </div>
-                    </div>
-                    <form id="contact-form">
-                        <div id="contact-form-inputs">
-                            <p>Or leave a message below and I'll get back to you.</p>
-                            <div>
-                                <input type="text" placeholder="First name*" required />
-                                <input type="text" placeholder="Last name*" required />
+                <div id="contact-content">
+                    <div id="contact">
+                        <div id="contact-intro">
+                            <h3>Get in Touch</h3>
+                            <p>To discuss a project, learn to code, or talk about tech, say hi!</p>
+                            <div id="contact-intro-links">
+                                <a href="tel:'00000000000'">Call</a>
+                                <a href="mailto:'info@netmatters.com">Email</a>
                             </div>
-                            <input type="email" placeholder="Email address*" required />
-                            <input type="text" placeholder="Subject" />
-                            <textarea id="contact-form-inputs-message" placeholder="Message*" required></textarea>
                         </div>
-                        <button id="contact-form-submit" type="submit">Submit</button>
-                    </form>
+                        <form id="contact-form">
+                            <div id="contact-form-inputs">
+                                <p>Or leave a message below and I'll get back to you.</p>
+                                <div>
+                                    <input type="text" placeholder="First name*" required />
+                                    <input type="text" placeholder="Last name*" required />
+                                </div>
+                                <input type="email" placeholder="Email address*" required />
+                                <input type="text" placeholder="Subject" />
+                                <textarea id="contact-form-inputs-message" placeholder="Message*" required></textarea>
+                            </div>
+                            <button id="contact-form-submit" type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <a id="return" href="#home">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <title>keyboard_arrow_up</title>
+                            <path d="M7.406 15.422l-1.406-1.406 6-6 6 6-1.406 1.406-4.594-4.594z"></path>
+                        </svg>
+                        Back To Top
+                    </a>
                 </div>
-                <a id="return" href="#home">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <title>keyboard_arrow_up</title>
-                        <path d="M7.406 15.422l-1.406-1.406 6-6 6 6-1.406 1.406-4.594-4.594z"></path>
-                    </svg>
-                    Back To Top
-                </a>
             </section>
         </div>
     </div>
-    
+
 
     <script src="../js/jquery.js"></script>
     <script src="../js/main.js"></script>
