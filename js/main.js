@@ -14,9 +14,31 @@ $(document).ready(function () {
 });
 
 let menuWrapper = document.getElementById('menu-wrapper');
-let navBar = document.getElementById('nav');
+let header = document.getElementById('header');
 
 menuWrapper.addEventListener('click', () => {
   // Toggle the "nav-active" class on the "navBar" element
-  navBar.classList.toggle('nav-active');
+  header.classList.toggle('is-active');
 });
+
+// JavaScript code to toggle the 'is-active' class when the screen width is large or wider
+function toggleIsActiveClass() {
+  const header = document.getElementById('header');
+  const screenWidth = window.innerWidth;
+
+  // Replace 'largeScreenWidth' with your desired screen width breakpoint in pixels
+  const largeScreenWidth = 992;
+
+  if (screenWidth >= largeScreenWidth && !header.classList.contains('is-active')) {
+    header.classList.add('is-active');
+  }
+}
+
+// Initially, call the function to set the class based on the current screen width
+toggleIsActiveClass();
+
+// Listen for the 'resize' event on the 'window' object and update the class accordingly
+window.addEventListener('resize', toggleIsActiveClass);
+
+
+
