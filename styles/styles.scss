@@ -108,7 +108,7 @@ $extra-extra-large: 1560px;
             &-initial {
                 display: flex;
                 justify-content: center;
-                margin-top: 5px;
+                margin-top: 1px;
                 border-radius: 0 20px 0 0;
                 padding: 20px 0;
                 width: 100%;
@@ -239,7 +239,7 @@ $extra-extra-large: 1560px;
         margin: 0;
         width: 90vw;
         border-radius: 0 20px 20px 0;
-        border-right: 3px solid rgb(250, 250, 250);
+        border-right: 3px solid rgb(210, 210, 210);
         border-left: 0;
         border-top: 0;
         border-bottom: 0;
@@ -247,7 +247,7 @@ $extra-extra-large: 1560px;
         background-color: white;
 
         @media (prefers-color-scheme: dark) {
-            border-right: 3px solid rgb(255, 254, 240);
+            border-right: 3px solid rgb(210, 210, 210);
             background-color: rgb(30, 30, 30);
         }
 
