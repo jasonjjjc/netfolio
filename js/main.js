@@ -23,14 +23,58 @@ $(document).ready(function () {
 
 // make the header menu appear and disappear when the menu button is clicked
 
-let menuWrapper = document.getElementById('menu-wrapper');
-let header = document.getElementById('header');
+    // Get the elements by their IDs
+    const menuWrapper = document.getElementById('menu-wrapper');
+    const nav = document.getElementById('nav');
 
-menuWrapper.addEventListener('click', () => {
-  // Toggle the "nav-active" class on the "navBar" element
-  header.classList.toggle('is-active');
-});
+    // Add event listener to the menu-wrapper element
+    menuWrapper.addEventListener('click', function () {
+        // Check if the nav is currently visible
+        const isNavVisible = parseInt(getComputedStyle(nav).left) >= 0;
 
+        // Toggle the visibility of the nav with animation
+        if (isNavVisible) {
+            hideNav();
+        } else {
+            showNav();
+        }
+    });
+
+    // Function to animate showing the nav
+    function showNav() {
+        nav.style.left = '0'; // Move the nav back to its original position
+    }
+
+    // Function to animate hiding the nav
+    function hideNav() {
+        nav.style.left = '-200px'; // Move the nav off to the left
+    }
+
+
+    // listen to the screen width to reposition the nav when the screen width is large or wider
+
+    function handleResponsive() {
+      const largeScreenWidth = 992; // Define the large screen width (replace with your desired value)
+      const nav = document.getElementById('nav');
+  
+      // Get the current screen width
+      const screenWidth = window.innerWidth;
+  
+      // Check if the screen width is greater than or equal to the large screen width
+      if (screenWidth >= largeScreenWidth) {
+        nav.style.left = '0'; // Apply the corresponding style when the condition is met
+      } else {
+        nav.style.left = ''; // Reset the style when the condition is not met
+      }
+    }
+  
+    // Call the function initially to set the style based on the initial screen width
+    handleResponsive();
+  
+    // Listen for the 'resize' event on the 'window' object and call the function accordingly
+    window.addEventListener('resize', handleResponsive);
+
+    
 
 
 
@@ -73,17 +117,18 @@ window.addEventListener('resize', toggleIsActiveClass);
 // Get the form and submit button elements
 const contactSection = document.getElementById('contact');
 const contactForm = document.getElementById('contact-form');
+const contactFormInputs = document.getElementById('contact-form-inputs');
 const submitButton = document.getElementById('contact-form-submit');
 
 // Regular expression for email validation
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Function to display validation error messages below the input fields
-function showValidationError(inputField, message) {
+function showValidationError(message) {
   const errorDiv = document.createElement('div');
   errorDiv.className = 'validation-error';
   errorDiv.textContent = message;
-  inputField.parentNode.appendChild(errorDiv);
+  contactFormInputs.appendChild(errorDiv);
 }
 
 // Function to remove validation error messages
@@ -113,28 +158,28 @@ submitButton.addEventListener('click', function (event) {
 
   // Perform basic validation
   if (firstName.trim() === '') {
-    showValidationError(document.getElementById('first-name'), 'Please enter your first name.');
+    showValidationError('Please enter your first name.');
     return;
   }
 
   if (lastName.trim() === '') {
-    showValidationError(document.getElementById('last-name'), 'Please enter your last name.');
+    showValidationError('Please enter your last name.');
     return;
   }
 
   if (email.trim() === '') {
-    showValidationError(document.getElementById('email'), 'Please enter your email address.');
+    showValidationError('Please enter your email address.');
     return;
   }
 
   // Check if the email is in a valid format using the regex
   if (!emailRegex.test(email)) {
-    showValidationError(document.getElementById('email'), 'Please enter a valid email address.');
+    showValidationError('Please enter a valid email address.');
     return;
   }
 
   if (message.trim() === '') {
-    showValidationError(document.getElementById('contact-form-inputs-message'), 'Please enter your message.');
+    showValidationError('Please enter your message.');
     return;
   }
 
@@ -143,7 +188,7 @@ submitButton.addEventListener('click', function (event) {
   // append confirmation message to the form
   const confirmationMessage = document.createElement('p');
   confirmationMessage.className = 'confirmation-message';
-  confirmationMessage.textContent = 'Thank you for your message. We will get back to you as soon as possible.';
+  confirmationMessage.textContent = 'Thank you for your message. I will get back to you as soon as possible.';
   contactSection.appendChild(confirmationMessage);
   // remove the form
   contactForm.remove();
