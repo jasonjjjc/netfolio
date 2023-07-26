@@ -71,6 +71,7 @@ window.addEventListener('resize', toggleIsActiveClass);
 // Perform input validation on all contact form inputs and ensure that the email address is in a valid formatusing regex
 
 // Get the form and submit button elements
+const contactSection = document.getElementById('contact');
 const contactForm = document.getElementById('contact-form');
 const submitButton = document.getElementById('contact-form-submit');
 
@@ -143,7 +144,7 @@ submitButton.addEventListener('click', function (event) {
   const confirmationMessage = document.createElement('p');
   confirmationMessage.className = 'confirmation-message';
   confirmationMessage.textContent = 'Thank you for your message. We will get back to you as soon as possible.';
-  contactForm.appendChild(confirmationMessage);
+  contactSection.appendChild(confirmationMessage);
   // remove the form
   contactForm.remove();
 
