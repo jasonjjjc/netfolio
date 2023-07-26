@@ -246,6 +246,10 @@ $extra-extra-large: 1560px;
 
         }
 
+        @media (prefers-color-scheme: dark) {
+            background-color: transparent;
+        }
+
 
     }
 
@@ -1088,10 +1092,19 @@ $extra-extra-large: 1560px;
                                 background-color: rgb(240, 240, 240);
                             }
 
+                            &:active {
+                                background-color: white;
+                            }
+
                             @media (prefers-color-scheme: dark) {
                                 &:hover {
                                     background-color: rgb(255, 254, 240);
                                     color: rgb(30, 30, 30);
+                                }
+                                
+                                &:active {
+                                    background-color: rgb(30, 30, 30);
+                                    color: rgb(255, 254, 240);
                                 }
                             }
                         }
@@ -1184,6 +1197,7 @@ $extra-extra-large: 1560px;
                         textarea:focus {
                             box-shadow: 0 0 5px lightblue;
                         }
+
                         @media (prefers-color-scheme: dark) {
                             input, textarea {
                                 color: rgb(30, 30, 30);
@@ -1212,16 +1226,31 @@ $extra-extra-large: 1560px;
                             background-color: rgb(240, 240, 240);
                         }
 
+                        &:active {
+                            background-color: white;
+                        }
+
                         @media (prefers-color-scheme: dark) {
                             &:hover {
                                 background-color: rgb(255, 254, 240);
                                 color: rgb(30, 30, 30);
                             }
+
+                            &:active {
+                                background-color: rgb(30, 30, 30);
+                                color: rgb(255, 254, 240);
+                            }
                         }
 
                     }
 
-                    
+                    .validation-error {
+                        color: darkred;
+
+                        @media (prefers-color-scheme: dark) {
+                            color: rgb(255, 225, 0);
+                        }
+                    }
 
 
                 }
