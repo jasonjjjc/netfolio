@@ -621,6 +621,10 @@ $extra-extra-large: 1560px;
                                     background-color: transparent;
                                 }
                             }
+
+                            @media (prefers-color-scheme: dark) {
+                                background-color: transparent;
+                            }
                         }
 
                         .review-more {
