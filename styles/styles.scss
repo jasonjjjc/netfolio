@@ -124,7 +124,6 @@ $extra-extra-large: 1560px;
                 border-radius: 0 20px 0 0;
                 height: 25vh;
                 width: 100%;
-                font-size: 20px;
                 background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
                 background-position: 40% 50%;
                 -webkit-background-clip: text;
@@ -132,11 +131,28 @@ $extra-extra-large: 1560px;
 
                 >h1 {
                     color: transparent;
+                    font-size: 30px;
 
                     @media (prefers-color-scheme: dark) {
                         background-color: transparent;
                         color: transparent;
 
+                    }
+
+                    @media (min-height: 300px) {
+                        font-size: 40px;
+                    }
+
+                    @media (min-height: 450px) {
+                        font-size: 50px;
+                    }
+    
+                    @media (min-height: 600px) {
+                        font-size: 80px;
+                    }
+
+                    @media (min-height: 700px) {
+                        font-size: 120px;
                     }
                 }
 
@@ -165,13 +181,8 @@ $extra-extra-large: 1560px;
 
                 }
 
-                @media (min-width: $large) {
-                    font-size: 40px;
-                }
 
-                @media (min-width: $extra-large) {
-                    font-size: 60px;
-                }
+
             }
 
             &-bar {
@@ -185,7 +196,7 @@ $extra-extra-large: 1560px;
 
                     >a {
                         display: block;
-                        padding: 15px 50px 15px 15px;
+                        padding: 5px 15px;
 
                         &:hover {
                             background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
@@ -204,9 +215,22 @@ $extra-extra-large: 1560px;
                             }
                         }
 
-                        @media (min-width: $large) {
-                            padding: 15px 10px 15px 15px;
+                        @media (min-height: 300px) {
+                            padding: 10px 15px;
                         }
+
+                        @media (min-height: 450px) {
+                            padding: 15px 40px 15px 15px;
+                        }
+
+                        @media (min-height: 600px) {
+                            padding: 20px 40px 20px 20px;
+                        }
+
+                        @media (min-height: 700px) {
+                            padding: 30px 40px 30px 30px;
+                        }
+
                     }
 
 
@@ -231,8 +255,8 @@ $extra-extra-large: 1560px;
 
 
                 >svg {
-                    height: 30px;
-                    width: 30px;
+                    height: 20px;
+                    width: 20px;
                     fill: #333645;
 
                     @media (prefers-color-scheme: dark) {
@@ -240,9 +264,24 @@ $extra-extra-large: 1560px;
                         background-color: transparent;
                     }
 
-                    @media (min-width: $large) {
+                    @media (min-height: 300px) {
+                        height: 30px;
+                        width: 30px;
+                    }
+
+                    @media (min-height: 450px) {
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    @media (min-height: 600px) {
                         height: 50px;
                         width: 50px;
+                    }
+
+                    @media (min-height: 700px) {
+                        height: 60px;
+                        width: 60px;
                     }
 
 
@@ -308,6 +347,7 @@ $extra-extra-large: 1560px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    gap: 30px;
                     height: 100%;
                     width: 100%;
 
@@ -335,6 +375,7 @@ $extra-extra-large: 1560px;
                         }
 
                         @media (min-width: $large) {
+
                             // on very wide screens make sure the height of the screen is enough before increasing the size of the title text
                             @media (min-height: 450px) {
                                 font-size: 70px;
@@ -344,22 +385,14 @@ $extra-extra-large: 1560px;
                         }
 
                         @media (min-width: $extra-large) {
+
                             // on very wide screens make sure the height of the screen is enough before increasing the size of the title text
-                            @media (min-height: 450px) {
+                            @media (min-height: 550px) {
                                 font-size: 90px;
                             }
                         }
 
                     }
-
-                    .sub {
-                        padding: 40px 0 0 0;
-
-                        @media (min-width: $extra-large) {
-                            padding: 60px 0;
-                        }
-                    }
-
 
                 }
 
