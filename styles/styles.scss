@@ -128,7 +128,7 @@ $extra-extra-large: 1560px;
                 background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
                 background-position: 40% 50%;
                 -webkit-background-clip: text;
-
+                background-clip: text;
 
                 >h1 {
                     color: transparent;
@@ -320,6 +320,7 @@ $extra-extra-large: 1560px;
                         background-position: 40% 50%;
 
                         -webkit-background-clip: text;
+                        background-clip: text;
 
                         @media (prefers-color-scheme: dark) {
                             filter: brightness(2.0);
@@ -334,7 +335,7 @@ $extra-extra-large: 1560px;
                         }
 
                         @media (min-width: $large) {
-                            // on very wide but short screens, the title is too big
+                            // on very wide screens make sure the height of the screen is enough before increasing the size of the title text
                             @media (min-height: 450px) {
                                 font-size: 70px;
                             }
@@ -343,7 +344,10 @@ $extra-extra-large: 1560px;
                         }
 
                         @media (min-width: $extra-large) {
-                            font-size: 100px;
+                            // on very wide screens make sure the height of the screen is enough before increasing the size of the title text
+                            @media (min-height: 450px) {
+                                font-size: 90px;
+                            }
                         }
 
                     }
