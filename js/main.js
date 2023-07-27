@@ -26,6 +26,8 @@ $(document).ready(function () {
 // Get the elements by their IDs
 const hidesNav = document.querySelectorAll('.hides-nav');
 const nav = document.getElementById('nav');
+// get the width of the screen
+const screenWidth = window.innerWidth;
 
 // Add event listener to the menu-wrapper element
 hidesNav.forEach((el) => {
@@ -43,8 +45,8 @@ hidesNav.forEach((el) => {
       }
     } else {
 
-      // all others can only close the nav
-      if (isNavVisible) {
+      // all others can only close the nav if the screen is small, otherwise the nav will stay visible
+      if (isNavVisible && screenWidth < 992) {
         hideNav();
       }
     }
