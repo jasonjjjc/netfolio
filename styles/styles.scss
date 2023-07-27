@@ -334,7 +334,12 @@ $extra-extra-large: 1560px;
                         }
 
                         @media (min-width: $large) {
-                            font-size: 70px;
+
+                            @media (min-height: 450px) {
+                                font-size: 70px;
+                            }
+
+
                         }
 
                         @media (min-width: $extra-large) {
