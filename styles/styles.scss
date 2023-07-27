@@ -405,6 +405,10 @@ $extra-extra-large: 1560px;
     #portfolio-wrapper {
         background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
         background-position: 40% 50%;
+        // make the background always cover the portfolio-wrapper div
+        background-size: cover;
+
+
         color: rgb(255, 254, 240);
 
         #portfolio-content {
@@ -552,9 +556,11 @@ $extra-extra-large: 1560px;
     #about-me-wrapper {
         background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
         background-position: 40% 50%;
+        background-size: cover;
         color: rgb(255, 254, 240);
         padding-left: 10px;
         padding-right: 10px;
+        min-height: 100vh;
 
         #about-me-content {
             display: grid;
@@ -718,9 +724,11 @@ $extra-extra-large: 1560px;
         align-items: center;
         padding-left: 10px;
         padding-right: 10px;
+        min-height: 100vh;
 
         background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
         background-position: 40% 50%;
+        background-size: cover;
         color: rgb(255, 254, 240);
 
         #code-content {
@@ -885,9 +893,11 @@ $extra-extra-large: 1560px;
         flex-direction: column;
         align-items: center;
         padding: 60px 10px;
+        min-height: 100vh;
 
         background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
         background-position: 40% 50%;
+        background-size: cover;
         color: rgb(255, 254, 240);
 
         #current-content {
