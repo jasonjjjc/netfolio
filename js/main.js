@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 
 
-// make the header menu appear and disappear when the menu button is clicked
+// make the header menu appear and disappear when the menu button is clicked and enable other buttons to close the nav on small screens
 
 // Get the elements by their IDs
 const hidesNav = document.querySelectorAll('.hides-nav');
@@ -54,6 +54,30 @@ hidesNav.forEach((el) => {
 
 
 })
+
+// attach an eventListener to every element on the page that is not the nav bar so that on mobile the user can click anywhere on the page to close the nav
+
+// Get all the elements on the page
+const allElements = document.querySelectorAll('*');
+
+// Add event listener to each element
+allElements.forEach((el) => {
+  if (el.id !== 'nav' && screenWidth < 992) {
+    el.addEventListener('click', function () {
+      // Check if the nav is currently visible
+      const isNavVisible = parseInt(getComputedStyle(nav).left) >= 0;
+
+      // Toggle the visibility of the nav with animation
+      if (isNavVisible) {
+        hideNav();
+      }
+    });
+  }
+});
+
+
+
+
 
 // Function to animate showing the nav
 function showNav() {
