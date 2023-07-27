@@ -334,7 +334,7 @@ $extra-extra-large: 1560px;
                         }
 
                         @media (min-width: $large) {
-
+                            // on very wide but short screens, the title is too big
                             @media (min-height: 450px) {
                                 font-size: 70px;
                             }
