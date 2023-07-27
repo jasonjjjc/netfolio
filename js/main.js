@@ -23,58 +23,71 @@ $(document).ready(function () {
 
 // make the header menu appear and disappear when the menu button is clicked
 
-    // Get the elements by their IDs
-    const menuWrapper = document.getElementById('menu-wrapper');
-    const nav = document.getElementById('nav');
+// Get the elements by their IDs
+const hidesNav = document.querySelectorAll('.hides-nav');
+const nav = document.getElementById('nav');
 
-    // Add event listener to the menu-wrapper element
-    menuWrapper.addEventListener('click', function () {
-        // Check if the nav is currently visible
-        const isNavVisible = parseInt(getComputedStyle(nav).left) >= 0;
+// Add event listener to the menu-wrapper element
+hidesNav.forEach((el) => {
+  el.addEventListener('click', function () {
+    // Check if the nav is currently visible
+    const isNavVisible = parseInt(getComputedStyle(nav).left) >= 0;
 
-        // Toggle the visibility of the nav with animation
-        if (isNavVisible) {
-            hideNav();
-        } else {
-            showNav();
-        }
-    });
-
-    // Function to animate showing the nav
-    function showNav() {
-        nav.style.left = '0'; // Move the nav back to its original position
-    }
-
-    // Function to animate hiding the nav
-    function hideNav() {
-        nav.style.left = '-200px'; // Move the nav off to the left
-    }
-
-
-    // listen to the screen width to reposition the nav when the screen width is large or wider
-
-    function handleResponsive() {
-      const largeScreenWidth = 992; // Define the large screen width (replace with your desired value)
-      const nav = document.getElementById('nav');
-  
-      // Get the current screen width
-      const screenWidth = window.innerWidth;
-  
-      // Check if the screen width is greater than or equal to the large screen width
-      if (screenWidth >= largeScreenWidth) {
-        nav.style.left = '0'; // Apply the corresponding style when the condition is met
+    // Toggle the visibility of the nav with animation
+    if (el.id === 'menu-wrapper') {
+      // only the menu button can both open and close the nav
+      if (isNavVisible) {
+        hideNav();
       } else {
-        nav.style.left = ''; // Reset the style when the condition is not met
+        showNav();
+      }
+    } else {
+
+      // all others can only close the nav
+      if (isNavVisible) {
+        hideNav();
       }
     }
-  
-    // Call the function initially to set the style based on the initial screen width
-    handleResponsive();
-  
-    // Listen for the 'resize' event on the 'window' object and call the function accordingly
-    window.addEventListener('resize', handleResponsive);
+  });
 
-    
+
+})
+
+// Function to animate showing the nav
+function showNav() {
+  nav.style.left = '0'; // Move the nav back to its original position
+}
+
+// Function to animate hiding the nav
+function hideNav() {
+  nav.style.left = '-200px'; // Move the nav off to the left
+}
+
+
+// listen to the screen width to reposition the nav when the screen width is large or wider
+
+function handleResponsive() {
+  const largeScreenWidth = 992; // Define the large screen width (replace with your desired value)
+  const nav = document.getElementById('nav');
+
+  // Get the current screen width
+  const screenWidth = window.innerWidth;
+
+  // Check if the screen width is greater than or equal to the large screen width
+  if (screenWidth >= largeScreenWidth) {
+    nav.style.left = '0'; // Apply the corresponding style when the condition is met
+  } else {
+    nav.style.left = ''; // Reset the style when the condition is not met
+  }
+}
+
+// Call the function initially to set the style based on the initial screen width
+handleResponsive();
+
+// Listen for the 'resize' event on the 'window' object and call the function accordingly
+window.addEventListener('resize', handleResponsive);
+
+
 
 
 
