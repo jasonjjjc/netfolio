@@ -146,7 +146,7 @@ $extra-extra-large: 1560px;
                     @media (min-height: 450px) {
                         font-size: 50px;
                     }
-    
+
                     @media (min-height: 600px) {
                         font-size: 80px;
                     }
@@ -517,12 +517,12 @@ $extra-extra-large: 1560px;
                     }
 
                     &:hover {
+                        transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+                        transform: scale(1.025);
+                        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
 
                         >img {
-                            transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
-                            transform: scale(1.025);
                             filter: brightness(100%);
-                            box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
                         }
                     }
 
