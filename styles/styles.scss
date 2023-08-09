@@ -483,12 +483,11 @@ $extra-extra-large: 1560px;
                     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
                     display: flex;
                     flex-direction: column;
-                    padding-bottom: 20px;
                     background-color: rgba(0, 0, 0, 0.7);
 
                     >a {
                         border-radius: 8px 8px 0 0;
-                        margin-bottom: 5px;
+
 
                         >img {
                             border-radius: 8px 8px 0 0;
@@ -512,7 +511,7 @@ $extra-extra-large: 1560px;
     
                         >p {
                             font-size: 0.8rem;
-                            padding: 0 0 0 20px;
+                            padding: 0 0 30px 20px;
     
                             @media (prefers-color-scheme: dark) {
                                 background-color: transparent;
