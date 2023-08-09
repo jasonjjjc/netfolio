@@ -487,11 +487,10 @@ $extra-extra-large: 1560px;
 
                     >a {
                         border-radius: 8px 8px 0 0;
-
+                        position: relative;
 
                         >img {
                             border-radius: 8px 8px 0 0;
-                            filter: brightness(70%);
                             width: 100%;
                         }
                         
@@ -519,9 +518,58 @@ $extra-extra-large: 1560px;
     
                         }
 
+                        .summary {
+                            line-height: 1.5em;
+                        }
+
+                        .view-site {
+                            align-self: center;
+                        }
+
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+
+                            li {
+                                padding: 5px 15px;
+                                text-align: center;
+                                border-radius: 9999px;
+                            }
+                            
+                        }
+
+                        .hover-text {
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            padding-left: 20px;
+                            background-color: rgba(0, 0, 0, 0.9);
+                            border-radius: 8px;
+
+                            >* {
+                                padding: 20px;
+                                @media (prefers-color-scheme: dark) {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+
                         @media (prefers-color-scheme: dark) {
                             background-color: transparent;
                         }
+
+                        &:hover {
+                            * {
+                                color: rgb(112, 249, 249);
+                            }
+                        }
+
                     }
 
 
@@ -530,8 +578,8 @@ $extra-extra-large: 1560px;
                         transform: scale(1.025);
                         box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
 
-                        >a>img {
-                            filter: brightness(100%);
+                        >a>.hover-text {
+                            display: flex;
                         }
                     }
 
