@@ -171,17 +171,21 @@ function showValidationError(message) {
 }
 
 // Function to remove validation error messages
-function removeValidationError(inputField) {
-  const errorDiv = inputField.parentNode.querySelector('.validation-error');
-  if (errorDiv) {
+function removeAllValidationErrors() {
+  const errorDivs = document.querySelectorAll('.validation-error');
+  errorDivs.forEach(errorDiv => {
     errorDiv.remove();
-  }
+  });
 }
 
+// Add event listener to the form's submit button
 // Add event listener to the form's submit button
 submitButton.addEventListener('click', function (event) {
   // Prevent the form from submitting by default
   event.preventDefault();
+
+  // Remove all existing validation error messages
+  removeAllValidationErrors();
 
   // Get the values of the form fields
   const firstName = document.getElementById('first-name').value;
@@ -189,47 +193,45 @@ submitButton.addEventListener('click', function (event) {
   const email = document.getElementById('email').value;
   const message = document.getElementById('contact-form-inputs-message').value;
 
-  // Remove any existing validation error messages
-  const inputFields = [document.getElementById('first-name'), document.getElementById('last-name'), document.getElementById('email'), document.getElementById('contact-form-inputs-message')];
-  inputFields.forEach(inputField => {
-    removeValidationError(inputField);
-  });
+  // Array to store validation error messages
+  let errorMessages = [];
 
   // Perform basic validation
   if (firstName.trim() === '') {
-    showValidationError('Please enter your first name.');
-    return;
+    errorMessages.push('Please enter your first name.');
   }
 
   if (lastName.trim() === '') {
-    showValidationError('Please enter your last name.');
-    return;
+    errorMessages.push('Please enter your last name.');
   }
 
   if (email.trim() === '') {
-    showValidationError('Please enter your email address.');
-    return;
-  }
-
-  // Check if the email is in a valid format using the regex
-  if (!emailRegex.test(email)) {
-    showValidationError('Please enter a valid email address.');
-    return;
+    errorMessages.push('Please enter your email address.');
+  } else if (!emailRegex.test(email)) {
+    errorMessages.push('Please enter a valid email address.');
   }
 
   if (message.trim() === '') {
-    showValidationError('Please enter your message.');
-    return;
+    errorMessages.push('Please enter your message.');
   }
 
-  // If all validation passes, submit the form
-  // contactForm.submit();
-  // append confirmation message to the form
-  const confirmationMessage = document.createElement('p');
-  confirmationMessage.className = 'confirmation-message';
-  confirmationMessage.textContent = 'Thank you for your message. I will get back to you as soon as possible.';
-  contactSection.appendChild(confirmationMessage);
-  // remove the form
-  contactForm.remove();
+  // Display all validation error messages
+  errorMessages.forEach(message => {
+    showValidationError(message);
+  });
+
+  // If there are no validation errors, proceed with form submission
+  if (errorMessages.length === 0) {
+    // If all validation passes, submit the form
+    // contactForm.submit();
+    // append confirmation message to the form
+    const confirmationMessage = document.createElement('p');
+    confirmationMessage.className = 'confirmation-message';
+    confirmationMessage.textContent = 'Thank you for your message. I will get back to you as soon as possible.';
+    contactSection.appendChild(confirmationMessage);
+    // remove the form
+    contactForm.remove();
+  }
 
 });
+
