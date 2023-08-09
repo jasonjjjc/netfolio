@@ -1010,18 +1010,6 @@ $extra-extra-large: 1560px;
                         gap: 20px;
                         padding: 20px;
 
-
-                        &-image {
-                            display: none;
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 50%;
-
-                            @media (min-width: $medium) {
-                                display: block;
-                            }
-                        }
-
                         &-quote {
                             display: flex;
                             flex-direction: column;
@@ -1073,6 +1061,19 @@ $extra-extra-large: 1560px;
                         transform: scale(1.025);
                         filter: brightness(95%);
                         box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
+                    }
+
+                    @media (min-width: 1260px) {
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 20px;
+                        >img {
+                            width: 500px;
+                        }
+
+                        >.code-author {
+                            padding-bottom: 40px;
+                        }
                     }
 
 
