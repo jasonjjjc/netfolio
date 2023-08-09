@@ -24,7 +24,8 @@
                 </a>
                 <ul id="nav-bar">
                     <li class="nav-bar-item"><a class="title" href="about-me.html">About Me</a></li>
-                    <li class="nav-bar-item"><a class="title hides-nav" href="/index.html#portfolio-wrapper">My Portfolio</a></li>
+                    <li class="nav-bar-item"><a class="title hides-nav" href="/index.html#portfolio-wrapper">My
+                            Portfolio</a></li>
                     <li class="nav-bar-item"><a class="title" href="#">Code Examples</a></li>
                     <li class="nav-bar-item"><a class="title" href="current.html">SCS Scheme</a></li>
                     <li class="nav-bar-item"><a class="title hides-nav" href="#contact-wrapper">Contact Me</a></li>
@@ -67,8 +68,20 @@
                                 <img class="code-author-image" src="../assets/avatars/jason.jpeg"
                                     alt="Jason Chalangary" />
                                 <div class="code-author-quote">
-                                    <h4>Using Next.JS Server-Side Rendering to gather data during build time to increase
-                                        performance and reduce server requests.</h4>
+                                    <h4>Using Next.JS Server-Side Rendering to pre-render the contents of the site</h4>
+                                    <p class="code-author-summary">This function uses the Next.js GetStaticProps utility
+                                        to check whether the database URL environment variable is accessible and fetch
+                                        the data from the database using the API key if it is. Finally, it uses async
+                                        await syntax to ensure that the fetch has completed before using the json method
+                                        to convert it to json format so that the record property can be stored as a prop
+                                        variable
+                                        called 'questions' that can be used to render the content of the page. This code
+                                        prevents repeated calls to the back-end server at each step of the site by
+                                        fetching the entire data only once. The code checks that the environment
+                                        variable is available to prevent needless server calls that will definitely fail
+                                        with those variables. To collect larger datasets, the entire process is run only
+                                        once at build-time to pre-render the contents of the page so that run-time is
+                                        always super-fast for users.</p>
                                     <p class="code-author-more">Read more &rarr;</p>
                                 </div>
                             </div>
@@ -79,9 +92,18 @@
                                 <img class="code-author-image" src="../assets/avatars/jason.jpeg"
                                     alt="Jason Chalangary" />
                                 <div class="code-author-quote">
-                                    <h4>Using a React map function to populate the page dyanmically based on a project
+                                    <h4>Using a React map function to populate the page dynamically based on a project
                                         that is
                                         selected by the user.</h4>
+                                    <p class="code-author-summary">This jsx code checks to see whether the user has
+                                        selected a project and if they have it renders a div on the page with title text
+                                        that is dynamically rendered based on the title property of the project that is
+                                        selected. It then maps through all the other properties of the selected project
+                                        to ensure that only desired properties are used to create sections on the new
+                                        page and populate those sections with the values of those properties. This code
+                                        enables me to add 100 projects to this portfolio and the only change required
+                                        for each project would be to add the text data to the json file instead of
+                                        creating 100 pages and adding html and styles to them individually.</p>
                                     <p class="code-author-more">Read more &rarr;</p>
                                 </div>
                             </div>
@@ -95,6 +117,17 @@
                                     <h4>Combining Javascript's DOM manipulation capabilities and forEach method to
                                         create a function I can apply to any button to get the nav bar out of the way
                                         when the user is navigated to a section of the page.</h4>
+                                    <p class="code-author-summary">I noticed that a few elements were all doing the same
+                                        thing; hiding the navbar. So I gave them a css class called 'hides-nav' and used
+                                        it as a javascript querySelectorAll target to attach a function. The function
+                                        first checks whether the element's ID is 'menu-wrapper' and uses conditional
+                                        logic to toggle the navbar's display property between 'none' and 'flex' using
+                                        hideNav and showNav callback functions respectively. If the element is not the
+                                        menu-wrapper, it simply checks whether the navbar is visible and hides the
+                                        navbar if it is. This eliminated several duplications of eventListeners that
+                                        were calling the hideNav and showNav functions, making the code more modular
+                                        because I can reuse this code by adding the class 'hides-nav' to additional
+                                        elements in the future.</p>
                                     <p class="code-author-more">Read more &rarr;</p>
                                 </div>
                             </div>
