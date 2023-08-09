@@ -366,12 +366,8 @@ $extra-extra-large: 1560px;
                             filter: brightness(2.0);
                         }
 
-                        @media (min-width: $small) {
-                            font-size: 50px;
-                        }
-
                         @media (min-width: $medium) {
-                            font-size: 50px;
+                            font-size: 40px;
                         }
 
                         @media (min-width: $large) {
@@ -392,6 +388,22 @@ $extra-extra-large: 1560px;
                             }
                         }
 
+                    }
+
+                    .outside-the-box {
+                        width: fit-content;
+                        padding: 0 20px;
+                        background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+                        background-position: 40% 50%;
+                        background-size:initial;
+                        // make the background image lighter
+                        filter: brightness(2.0);
+                        color: rgb(30, 30, 30);
+
+                        >span {
+                            filter: brightness(0.5);
+                            background-color: transparent;
+                        }
                     }
 
                 }
@@ -417,8 +429,9 @@ $extra-extra-large: 1560px;
         }
 
         @media (min-width: $small) {
-            padding-left: 20px;
+            padding-top: 60px;
             padding-right: 20px;
+            padding-left: 20px;
         }
 
 
@@ -447,7 +460,6 @@ $extra-extra-large: 1560px;
     #portfolio-wrapper {
         background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
         background-position: 40% 50%;
-        // make the background always cover the portfolio-wrapper div
         background-size: cover;
 
 
@@ -1067,6 +1079,7 @@ $extra-extra-large: 1560px;
                         flex-direction: row;
                         align-items: center;
                         padding: 20px;
+
                         >img {
                             width: 500px;
                         }
