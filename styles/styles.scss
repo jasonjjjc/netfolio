@@ -392,13 +392,15 @@ $extra-extra-large: 1560px;
 
                     .outside-the-box {
                         width: fit-content;
-                        padding: 0 20px;
+                        padding: 0 40px;
+                        margin-left: -40px;
                         background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
                         background-position: 40% 50%;
                         background-size: initial;
                         // make the background image lighter
                         filter: brightness(2.0);
                         color: rgb(30, 30, 30);
+                        border-radius: 99999px;
 
                         >span {
                             filter: brightness(0.5);
