@@ -116,42 +116,7 @@ window.addEventListener('resize', handleResponsive);
 
 
 
-
-
-
-
-
-
-// toggle the is-active class on the header element when the screen width is large or wider
-
-function toggleIsActiveClass() {
-  const header = document.getElementById('header');
-  const screenWidth = window.innerWidth;
-
-  const largeScreenWidth = 992;
-
-  // only add the is-active class if the screen width is greater than or equal to 992px and the is-active class is not already present
-  if (screenWidth >= largeScreenWidth && !header.classList.contains('is-active')) {
-    header.classList.add('is-active');
-  }
-}
-
-// Initially, call the function to set the class based on the current screen width
-toggleIsActiveClass();
-
-// Listen for the 'resize' event on the 'window' object and update the class accordingly
-window.addEventListener('resize', toggleIsActiveClass);
-
-
-
-
-
-
-
-
-
-
-// Perform input validation on all contact form inputs and ensure that the email address is in a valid formatusing regex
+// Perform input validation on all contact form inputs and ensure that the email address is in a valid format using regex
 
 // Get the form and submit button elements
 const contactSection = document.getElementById('contact');
