@@ -137,6 +137,42 @@
                                 </div>
                             </div>
                         </a>
+                        <a href="https://github.com/jasonjjjc" target="_blank" class="example">
+                            <img src="../assets/thumbnails/code-sql.png" alt="MySQL query">
+                            <div class="code-author">
+                                <div class="code-author-quote">
+                                    <h3>Using SQL to monitor salary levels in a company</h3>
+                                    <p class="code-author-quote-summary">
+                                        <pre style="white-space: pre-wrap; overflow-x: auto;">
+                                            <code>
+SELECT 
+e.emp_id AS "Employee ID",
+e.emp_name AS "Employee Name",
+e.job_name AS "Job Title",
+TO_CHAR(e.salary, '$999,999.99') AS "Salary",
+DATE_PART('year', AGE(CURRENT_DATE, e.hire_date)) * 365 +
+DATE_PART('month', AGE(CURRENT_DATE, e.hire_date)) * 30 +
+DATE_PART('day', AGE(CURRENT_DATE, e.hire_date)) AS "Days Worked",
+d.dep_name AS "Department Name"
+                                            
+FROM employees e
+
+INNER JOIN department d ON e.dep_id = d.dep_id
+
+LEFT JOIN salary_grade s ON e.salary BETWEEN s.min_sal AND s.max_sal
+
+ORDER BY e.job_name ASC, e.salary DESC, "Days Worked" DESC;
+                                            </code>
+                                        </pre>
+                                    <br><br>
+                                    The query uses the DATE_PART function to calculate the number of days an employee has worked at the company and sorts the results by job title, salary, and days worked. This allows managers to see whether employees are being rewarded for their loyalty to the company and whether they are being paid fairly compared to their peers.
+                                    <br><br>
+                                    The outcome of this query is a simple table that only contains the employee ID, name, job title, salary, days worked, and department name. This makes it easy for managers to see the information they need at a glance and they can immediately identify any department that is not paying their employees fairly.
+                                    </p>
+                                    <p class="code-author-more">Read more &rarr;</p>
+                                </div>
+                            </div>
+                        </a>
                     </section>
                 </div>
             </div>
