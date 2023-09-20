@@ -1,10 +1,12 @@
 <?php
-$host = 'localhost';  // your host
-$db   = 'portfolio';  // your database name
-$user = 'root';   // your database username
-$pass = 'root';   // your database password
+$host = 'localhost';  
+$db   = 'portfolio';  
+$user = 'root';   
+$pass = 'root';   
 $charset = 'utf8mb4';
 
+
+// information required to connect to the database.
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -12,14 +14,21 @@ $options = [
     PDO::ATTR_EMULATE_PREPARES   => false,
 ];
 
+// create a new pdo connection using all the information above.
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    // Log the error for your own debugging (ensure logs are secure and not publicly accessible)
+    error_log($e->getMessage());
+    $response["status"] = "error";
+    $response["message"] = "There was a problem processing your request.";
 }
 
+// create a new array to store the response from the server.
 $response = ["status" => "", "message" => ""];
 
+
+// use if statements to determine what the response text should be.
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstName = trim($_POST['first_name']);
     $lastName = trim($_POST['last_name']);
@@ -44,6 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-
+// reveal the response to the user.
 echo json_encode($response);
 ?>

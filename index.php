@@ -98,7 +98,7 @@
                                 <div class="hover-text">
                                     <h3>Netmatters</h3>
                                     <p class="summary">Recreated the Netmatters homepage and made every element on the
-                                        page interactive and responsive.</p>
+                                        page dynamic, interactive and responsive using php to populate and retrieve data.</p>
                                     <div class="view-site">
                                         <p>View Site</p>
                                     </div>
