@@ -191,15 +191,15 @@ ORDER BY e.job_name ASC, e.salary DESC, "Days Worked" DESC;
                             <div id="contact-form-inputs">
                                 <p>Or leave a message below and I'll get back to you.</p>
                                 <div>
-                                    <input type="text" id="first-name" placeholder="First name*" required />
-                                    <input type="text" id="last-name" placeholder="Last name*" required />
+                                    <input type="text" id="first-name" name="first_name" placeholder="First name*" required />
+                                    <input type="text" id="last-name" name="last_name" placeholder="Last name*" required />
                                 </div>
-                                <input type="email" id="email" placeholder="Email address*" required />
-                                <input type="text" id="subject" placeholder="Subject" />
-                                <textarea id="contact-form-inputs-message" placeholder="Message*" required></textarea>
+                                <input type="email" id="email" name="email" placeholder="Email address*" required />
+                                <input type="text" id="subject" name="subject" placeholder="Subject" />
+                                <textarea id="contact-form-inputs-message" name="message" placeholder="Message*" required></textarea>
                             </div>
                             <button id="contact-form-submit" type="submit">Submit</button>
-                        </form>
+                        </form>    
                     </div>
                     <a id="return" class="hides-nav" href="#home-wrapper">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
