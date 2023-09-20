@@ -185,18 +185,36 @@ submitButton.addEventListener('click', function (event) {
     showValidationError(message);
   });
 
-  // If there are no validation errors, proceed with form submission
   if (errorMessages.length === 0) {
-    // If all validation passes, submit the form
-    // contactForm.submit();
-    // append confirmation message to the form
-    const confirmationMessage = document.createElement('p');
-    confirmationMessage.className = 'confirmation-message';
-    confirmationMessage.textContent = 'Thank you for your message. I will get back to you as soon as possible.';
-    contactSection.appendChild(confirmationMessage);
-    // remove the form
-    contactForm.remove();
-  }
+    fetch('submit_contact.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            subject: document.getElementById('subject').value,
+            message: message
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            const confirmationMessage = document.createElement('p');
+            confirmationMessage.className = 'confirmation-message';
+            confirmationMessage.textContent = data.message;
+            contactSection.appendChild(confirmationMessage);
+            contactForm.remove();
+        } else {
+            showValidationError(data.message);
+        }
+    })
+    .catch(error => {
+        showValidationError('There was an unexpected error. Please try again later.');
+    });
+}
 
 });
 
