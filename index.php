@@ -28,10 +28,10 @@
                     <h1>J</h1>
                 </a>
                 <ul id="nav-bar">
-                    <li class="nav-bar-item"><a class="title" href="about-me.html">About Me</a></li>
+                    <li class="nav-bar-item"><a class="title" href="about-me.php">About Me</a></li>
                     <li class="nav-bar-item"><a class="title hides-nav" href="#portfolio-wrapper">My Portfolio</a></li>
-                    <li class="nav-bar-item"><a class="title" href="code.html">Code Examples</a></li>
-                    <li class="nav-bar-item"><a class="title" href="current.html">SCS Scheme</a></li>
+                    <li class="nav-bar-item"><a class="title" href="code.php">Code Examples</a></li>
+                    <li class="nav-bar-item"><a class="title" href="current.php">SCS Scheme</a></li>
                     <li class="nav-bar-item"><a class="title hides-nav" href="#contact-wrapper">Contact Me</a></li>
                 </ul>
                 <a id="linkedin-button" class="title" href="https://linkedin.com/in/jason-chalangary"
