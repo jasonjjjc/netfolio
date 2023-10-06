@@ -128,7 +128,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://github.com/jasonjjjc/care" target="_blank" class="lower">
+                            <a href="https://github.com/jasonjjjc/carechange" target="_blank" class="lower">
                                 <ul>
                                     <li>HTML</li>
                                     <li>TailwindCSS</li>
