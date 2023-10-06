@@ -117,7 +117,7 @@
                             </a>
                         </div>
                         <div class="project">
-                            <a href="http://carechange.com" target="_blank">
+                            <a href="https://carechange.com" target="_blank">
                                 <img src="./assets/thumbnails/carechange.png" alt="CareChange thumbnail">
                                 <div class="hover-text">
                                     <h3>CareChange</h3>
